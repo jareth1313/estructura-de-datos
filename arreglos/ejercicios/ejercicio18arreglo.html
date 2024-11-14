@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 18</title>
+</head>
+<body>
+    <!-- 18.Desarrolle un programa que lea 5 números por teclado los copie a otro arreglo multiplicado por 2 
+    y muestre todos los datos ordenados ascendentemente usando un 3er arreglo. -->
+    <script>
+        var arreglo1 = [];
+        var arreglo_mul = [];
+        var arreglo_combi = [];
+        var i, j, aux;
+
+        for (i = 0; i < 5; i++) {
+            var val = parseFloat(prompt("Ingrese el valor " + i + ":"));
+            arreglo1.push(val);
+            arreglo_mul.push(val * 2);
+        }
+
+        arreglo_combi = arreglo1.concat(arreglo_mul);
+
+        for (i = 0; i < arreglo_combi.length - 1; i++) {
+            for (j = 0; j < arreglo_combi.length - 1 - i; j++) {
+                if (arreglo_combi[j] > arreglo_combi[j + 1]) {
+
+                    aux = arreglo_combi[j];
+                    arreglo_combi[j] = arreglo_combi[j + 1];
+                    arreglo_combi[j + 1] = aux;
+                }
+            }
+        }
+        document.write("Números ingresados: " + arreglo1 + "<br>");
+        document.write("Números multiplicados por 2: " + arreglo_mul+ "<br>");
+        document.write("Arreglo combinado y ordenado: " + arreglo_combi);
+    </script>
+</body>
+</html>

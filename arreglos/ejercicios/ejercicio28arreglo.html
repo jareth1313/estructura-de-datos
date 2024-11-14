@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 28</title>
+</head>
+<body>
+<!-- 28.Almacene en un arreglo, 20 elementos de tipo entero e imprimir:
+a.	La suma de los elementos que ocupan posiciones pares.
+b.	El mayor de los elementos que ocupan posiciones impares.
+c.	La posición del mayor número par. -->
+    <script>
+        var numeros = [];
+        var suma_pares = 0;
+        var mayorImpar = 0;
+        var posicionMayorPar = -1;
+        var mayor_par = 0;
+
+        for (var i = 0; i < 20; i++) {
+            var num = parseInt(prompt("Ingrese el número "+i+": "));
+            numeros.push(num);
+
+            if (i % 2 === 0) {
+                suma_pares += num;
+            }
+
+            if (i % 2 !== 0) {
+                if (mayorImpar === 0 || num > mayorImpar) {
+                    mayorImpar = num;
+                }
+            }
+
+            if (num % 2 === 0) {
+                if (mayor_par === 0 || num > mayor_par) {
+                    mayor_par = num;
+                    posicionMayorPar = i;
+                }
+            }
+        }
+
+        document.write("Suma de los números en posiciones pares: " + suma_pares + "<br>");
+        
+        if (mayorImpar !== 0) {
+            document.write("El mayor número en posiciones impares es: " + mayorImpar + "<br>");
+        } else {
+            document.write("No se ingresaron números en posiciones impares.<br>");
+        }
+
+        if (posicionMayorPar !== -1) {
+            document.write("La posición del mayor número par es: " + posicionMayorPar + "<br>");
+        } else {
+            document.write("No se ingresaron números pares.<br>");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 7</title>
+</head>
+<body>
+    <!-- 7. Escriba un programa que reciba como entrada un arreglo unidimensional ordenado de enteros (posiblemente repetidos) 
+    y genere como salida una lista de los números enteros, pero sin repeticiones. -->
+    <script>
+        var enteros=[];
+
+        var tam=parseInt(prompt("Ingrese el tamaño: "));
+        for(var i=0;i<tam;i++){
+            enteros[i]=parseInt(prompt("Ingrese el valor " +i+": "));
+        }
+        document.write("Números ingresadors: "+enteros+" ");
+        
+        var sin_re=[];
+        for (i = 0; i < enteros.length; i++) {
+            if(enteros[i] !== enteros[i - 1]) {
+                sin_re.push(enteros[i]);
+            }
+        }
+        document.write("<br>Números sin repetición: "+sin_re+" ")
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 select</title>
+</head>
+<body>
+    <!-- 9.Realice el programa que determine el costo y el descuento que tendrá́ un artículo. Considere que si su precio es
+    mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100 pero menor a $200, 
+    el descuento es de 12%, y si es menor a $100, sólo 10%. -->
+    <script>
+        var precio=parseFloat(prompt("Ingrese el precio del artículo: "))
+        var descuento=0;
+        var total=0;
+        if(precio>=200){
+            descuento=precio*.15;
+            total=precio-descuento;
+            document.write("Total del artículo: "+precio+
+                "<br> Descuento de 15%: "+descuento+
+                "<br> Total a pagar: "+total
+            )
+        }else if(precio<200 && precio>100){
+            descuento=precio*.12;
+            total=precio-descuento;
+            document.write("Total del artículo: "+precio+
+                "<br> Descuento de 15%: "+descuento+
+                "<br> Total a pagar: "+total
+            )
+        }else if(precio<100){
+            descuento=precio*.10;
+            total=precio-descuento;
+            document.write("Total del artículo: "+precio+
+                "<br> Descuento de 15%: "+descuento+
+                "<br> Total a pagar: "+total
+            )
+        }
+    </script>
+</body>
+</html>

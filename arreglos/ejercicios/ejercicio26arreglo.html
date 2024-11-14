@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 26</title>
+</head>
+<body>
+<!-- 26.Almacene en un arreglo las temperaturas de un día (0-23 horas). Calcule su media e imprimir la temperatura más alta y la más baja;
+asimismo imprimir la hora respectiva. Por ejemplo, la temperatura media fue de 21.5 grados Celsius,
+la más alta de 29 grados Celsius a las 14 horas y la más baja de 9.4 grados Celsius a las 3 horas. -->
+    <script>
+
+    var temperaturas = [];
+    var suma = 0;
+
+    for (var i = 0; i < 24; i++) {
+        var temp = parseFloat(prompt("Ingrese la temperatura para la hora " + i + ":"));
+        temperaturas.push(temp);
+        suma += temp;  
+    }
+    
+    var temp_max = temperaturas[0];
+    var horaMax = 0;
+    var temp_min = temperaturas[0];
+    var horaMin = 0;
+
+    for (var i = 0; i < temperaturas.length; i++) {
+        if (temperaturas[i] > temp_max) {
+            temp_max = temperaturas[i];
+            horaMax = i;
+        }
+        if (temperaturas[i] < temp_min) {
+            temp_min = temperaturas[i];
+            horaMin = i;
+        }
+    }
+    var temp_media = suma / temperaturas.length;
+
+    document.write("La temperatura media fue de " + temp_media.toFixed(1) + " grados Celsius.<br>");
+    document.write("La temperatura mas alta fue de " + temp_max + " grados Celsius a las " + horaMax + " horas.<br>");
+    document.write("La temperatura mas baja fue de " + temp_min + " grados Celsius a las " + horaMin + " horas.<br>");
+
+    </script>
+</body>
+</html>

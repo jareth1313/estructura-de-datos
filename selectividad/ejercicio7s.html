@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 select</title>
+</head>
+<body>
+    <!-- 7.Fábricas “El cometa” produce artículos con claves (1, 2, 3, 4, 5 y 6). Se requiere un programa para calcular los
+    precios de venta, para esto hay que considerar lo siguiente:
+    Costo de producción = materia prima + mano de obra + gastos de fabricación.
+    Precio de venta = costo de producción + 45 % de costo de producción.
+    El costo de la mano de obra se obtiene de la siguiente forma: para los productos con clave 3 o 4 se carga 75% 
+    del costo de la materia prima; para los que tienen clave 1 y 5 se carga 80%, y para los que tienen clave 2 o 6, 85%.
+    Para calcular el gasto de fabricación se considera que si el artículo que se va a producir tiene claves 2 o 5, 
+    este gasto representa 30% sobre el costo de la materia prima; si las claves son 3 o 6, representa 35%; si las claves 
+    son 1 o 4, representa 28%. La materia prima tiene el mismo costo para cualquier clave. -->
+    <script>
+        var materia_prima = parseInt(prompt("Costo de la materia prima:"));
+        var clave = prompt("Clave del artículo:");
+        var mano_obra = 0;
+        var gastos_fabri = 0;
+        var costo=0;
+
+        if (clave == 3 || clave == 4){
+            mano_obra = materia_prima*1.75
+        }
+        if (clave == 1 || clave == 5){
+            mano_obra = materia_prima*1.80
+        }
+        if (clave == 2 || clave == 6){
+            mano_obra = materia_prima*1.85
+        }
+        if (clave == 2 || clave == 5){
+            gastos_fabri = materia_prima*1.30
+        }
+        if (clave == 3 || clave == 6){
+            gastos_fabri = materia_prima*1.35
+        }
+        if (clave == 1 || clave == 4){
+            gastos_fabri = materia_prima*1.28
+        }
+        costo = materia_prima+mano_obra+gastos_fabri
+        var venta = costo*1.45
+        document.write("El valor de venta del producto es: $"+venta)
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 30</title>
+</head>
+<body>
+<!-- 30.Almacene en una lista 15 números e imprimir cuántos son ceros, cuántos son negativos y cuántos positivos. 
+Imprimir además la suma de los negativos y la suma de los positivos.  -->
+    <script>
+    var numeros = [];
+    var ceros = 0;
+    var negativos = 0;
+    var positivos = 0;
+    var sum_negativos = 0;
+    var sum_positivos = 0;
+    
+    for (var i = 0; i < 15; i++) {
+        var num = parseInt(prompt("Ingrese el número " +i+ ": "));
+        numeros.push(num);
+
+        if (num === 0) {
+            ceros++;
+        } else if (num > 0) {
+            positivos++;
+            sum_positivos += num;
+        } else {
+            negativos++;
+            sum_negativos += num;
+        }
+    }
+    document.write("Cantidad de ceros: " + ceros + "<br>");
+    document.write("Cantidad de números positivos: " + positivos + "<br>");
+    document.write("Cantidad de números negativos: " + negativos + "<br>");
+    document.write("Suma de números positivos: " + sum_positivos + "<br>");
+    document.write("Suma de números negativos: " + sum_negativos + "<br>");
+    </script>
+</body>
+</html>

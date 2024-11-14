@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 12</title>
+</head>
+<body>
+    <!-- 12.Programa que llena un arreglo con los números impares en el rango del 1 al 100. -->
+    <script>
+        var impares=[];
+        var i=0;
+         while(i<100){
+            if(i%2!=0){
+                impares.push(i)
+            }
+            i++
+         }
+         for(i=0;i<impares.length;i++){
+            document.write(impares[i]+" ");
+         }
+    </script>
+</body>
+</html>

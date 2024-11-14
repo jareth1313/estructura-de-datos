@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 3.Se requiere un programa para determinar cuánto ahorrará una persona en un año,
+ si al final de cada mes deposita variables cantidades de dinero; además, 
+ se requiere saber cuánto lleva ahorrado cada mes.
+ Realice el programa utilizando un ciclo apropiado. -->
+<body>
+    <script>
+        var i=1
+        var suma=0;
+
+        var mes=parseInt(prompt("Ingrese la cantidad de meses a ahorrar: "));
+        do{
+            var dinero=parseFloat(prompt("Ingrese la cantidad a ahorrar el mes: "+i));
+            suma=suma+dinero;
+
+            document.write("Dinero ahorrado el mes "+i+" :"+suma+"<br>");
+            i++
+        }
+        while(i<=mes)
+        document.write("<br>Total ahorrado en "+mes+" mes/es: "+suma);
+    </script>
+</body>
+</html>

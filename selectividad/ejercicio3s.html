@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Select</title>
+</head>
+<body>
+    <script>
+        var total=0;
+        var personas=parseInt(prompt("Ingrese el número de personas: "));
+
+        if(personas<=200){
+            total=personas*95;
+
+            document.write("Cantidad de personas: "+personas+"<br>"+
+                "Total a pagar: $"+total)
+        }else if(personas >200 &&  personas <=300){
+            total=personas*85;
+            document.write("Cantidad de personas: "+personas+"<br>"+
+            "Total a pagar: $"+total)
+        }else if(personas > 300){
+            total=personas*75;
+            document.write("Cantidad de personas: "+personas+"<br>"+
+            "Total a pagar: $"+total)
+        }
+    </script>
+</body>
+</html>

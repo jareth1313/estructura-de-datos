@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 21</title>
+</head>
+<body>
+    <!-- 21.Construya un programa que realice las siguientes acciones. Considere un arreglo ordenado en forma ascendente 
+•	Genere un arreglo de 100 números aleatorios entre 0 y 100 
+•	Dado un número ingresado por el usuario, de como resultado la posición de la primera ocurrencia. 
+•	Dado un número ingresado ver cuantas veces se repite en el arreglo. 
+•	Muestre el arreglo las veces que el usuario lo requiera.  -->
+    <script>
+        while(true){
+            var numeros=[];
+            var i;
+
+            for (i=0; i <= 100; i++) {
+            var num_azar = Math.floor(Math.random() * 101) + 1;
+            numeros.push(num_azar);
+            }
+
+            var aux, j;
+            for(j=0;j<numeros.length-1;j++){
+                for(i=0;i<numeros.length-1-j;i++){
+                    if(numeros[i]>numeros[i+1]){
+                        aux=numeros[i];
+                        numeros[i]=numeros[i+1];
+                        numeros[i+1]=aux;
+                    }
+                }
+            }
+            alert(numeros)
+
+            var num_usuario = parseInt(prompt("Ingrese un número para buscar en el arreglo"));
+            var pos = numeros.indexOf(num_usuario);
+            document.write("Numero a buscar: "+num_usuario)
+            if (pos != -1) {
+                document.write("<br>El número se encuentra en la posición: " + pos);
+            }
+            var k;
+            var veces = 0;
+            for (k = 0; k < numeros.length; k++) {
+                if (num_usuario == numeros[k]) {
+                    veces++;
+                }
+            }
+            document.write("<br>El número se repite: "+veces+" vez/veces<br>");
+
+            var continuar=prompt("¿Desea continuar? (s/n)");
+            if(continuar.toLowerCase()=="n"){
+                break;
+            }
+        }
+        document.write("Arreglo Terminado")    
+    </script>
+</body>
+</html>

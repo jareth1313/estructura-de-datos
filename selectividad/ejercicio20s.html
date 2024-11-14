@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20 select</title>
+</head> 
+<body>
+    <!-- 20.Se requiere la implementación de un programa que dado un número entero positivo mayor a cero dé como 
+    resultado, si dicho número es par o impar. El ejercicio requiere la validación del dato de entrada. -->
+    <script>
+        var num=parseInt(prompt("Ingrese un numero entero:"))
+        if(num>0){
+            if (num % 2 === 0) {
+                alert("El número: " + num + " es par.");
+            } else {
+                alert("El número: " + num + " es impar.");
+            }
+        }else{
+            alert("Ingrese un numero entero mayor a cero")
+        }
+    </script>
+</body>
+</html>

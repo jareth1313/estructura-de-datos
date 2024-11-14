@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 29</title>
+</head>
+<body>
+<!-- 29.Almacene en un arreglo, n elementos (máximo 30) e imprimir la suma:
+a.	de números pares.
+b.	de números impares.
+c.	total de los elementos del arreglo.  -->
+    <script>
+        var numeros = [];
+        var suma_par = 0;
+        var suma_impar = 0;
+        var suma = 0;
+        
+        var tam = parseInt(prompt("Ingrese el tamaño del arreglo. (máximo 30)"));
+        
+        if (tam > 30 || tam <= 0) {
+            alert("Tamaño del arreglo invalido");
+        } else {
+            for (var i = 0; i < tam; i++) {
+                var num = parseInt(prompt("Ingrese el número "+i+": "));
+                numeros.push(num); 
+                suma += num;
+                
+                if (num % 2 === 0) {
+                    suma_par += num;
+                } else {
+                    suma_impar += num;
+                }
+            }
+            document.write("Números ingresados: "+numeros)
+            document.write("<br>Suma de números pares: " + suma_par + "<br>");
+            document.write("Suma de números impares: " + suma_impar + "<br>");
+            document.write("Suma total de los números: " + suma + "<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 11.Una compañía fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, 
+de un lote de N focos, el número de focos de cada color que hay en existencia.
+Desarrolle un programa para determinar esto, utilizando el ciclo apropiado. -->
+<body>
+    <script>
+        var i=1;
+        var c_focos=parseInt(prompt("Ingrese la cantidad del lote de focos: "));
+        var focos_verdes=0, focos_blancos=0, focos_rojos=0;
+
+        while(i<=c_focos){
+            var color=prompt("Ingrese el color del foco "+i+": (verde/blanco/rojo)");
+            if(color=="verde"){
+                focos_verdes++
+            }else if(color=="rojo"){
+                focos_rojos++
+            }else if(color=="blanco"){
+                focos_blancos++
+            }else{
+                alert("Color no válido");
+            }
+            i++
+        }
+        
+        var total_f=focos_blancos+focos_rojos+focos_verdes;
+            document.write("Focos rojos existentes: "+focos_rojos);
+            document.write("<br>Focos blancos existentes: "+focos_blancos);
+            document.write("<br>Focos verdes existentes: "+focos_verdes);
+            document.write("<br>Total de focos: "+total_f);
+    </script>
+</body>
+</html>

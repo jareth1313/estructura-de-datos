@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Selec</title>
+</head>
+<body>
+    <!-- 2.Almacenes “El harapiento distinguido” tiene una promoción: a todos los trajes 
+    que tienen un precio superior a $2500.00 se les aplicará un descuento de 15%, 
+    a todos los demás se les aplicará solo 8%. Realice un programa para determinar 
+    el precio final que debe pagar
+    una persona por comprar un traje y de cuánto es el descuento que obtendrá. -->
+    <script>
+        var total=0;
+        var precio=parseFloat(prompt("Ingrese el precio del traje: "));
+
+        if(precio>2500){
+            var descuento=precio*0.15;
+            total=precio-descuento;
+
+            document.write("Total a pagar con descuento del 15%: "+total);
+        }else{
+            var descuento=precio*0.08;
+            total=precio-descuento;
+            document.write("Costo del traje: "+precio+"<br>"+
+            "Precio a pagar con descuento del 8%: "+total);
+        }
+    </script>
+</body>
+</html>

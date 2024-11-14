@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 46</title>
+</head>
+<body>
+<!--46.Realizar un arreglo que registre n palabras y muestre aquellas que inician con una vocal. -->
+    <script>
+        var palabras = []; 
+        var vocales = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        var palabras_vocal = [];
+
+        var tam=parseInt(prompt("Ingrese la cantidad de palabras a ingresar: "));
+        for(var i=0;i<tam;i++){
+            var pal=prompt("Ingrese la palabra "+i+": ");
+            palabras.push(pal);
+        }
+        for (var i = 0; i < palabras.length; i++) {
+            var primeraLetra = palabras[i].charAt(0);
+            
+            if (vocales.includes(primeraLetra)) {
+                palabras_vocal.push(palabras[i]);
+            }
+        }
+        document.write("Palabras que empiezan con vocal: <br>");
+        for (var i = 0; i < palabras_vocal.length; i++) {
+            document.write(palabras_vocal[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

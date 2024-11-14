@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 select</title>
+</head>
+<body>
+    <!-- 12.Una compañía de seguros para autos ofrece dos tipos de póliza: cobertura amplia (A) y daños a terceros (B). 
+    Para el plan A, la cuota base es de $1,200, y para el B, de $950. A ambos planes se les carga 10% del costo si
+    la persona que conduce tiene por hábito beber alcohol, 5% si utiliza lentes, 5% si padece alguna enfermedad
+    –como deficiencia cardiaca o diabetes–, y si tiene más de 40 años, se le carga 20%, de lo contrario sólo 10%.
+    Todos estos cargos se realizan sobre el costo base. 
+    Realice un programa para determinar cuánto le cuesta a una persona contratar una póliza. -->
+    <script>
+        var poliza=prompt("Ingrese el tipo de póliza: (A),(B) ");
+
+        var alcohol=prompt("¿Bebe alcohol? ");
+        var lentes=prompt("¿Utiliza lentes? ")
+        var enfermedad=prompt("¿Padece alguna enfermedad? ")
+        var edad=parseInt(prompt("¿Cuál es su edad? "));
+        if(poliza==="A"){
+            var costoBase=1200;
+            if(alcohol==="si"){
+                costoBase=costoBase+(costoBase*0.10);
+                }
+                if(lentes==="si"){
+                    costoBase=costoBase+(costoBase*0.05);
+                }
+                if(enfermedad==="si"){
+                    costoBase=costoBase+(costoBase*0.05);
+                }if(edad<=40){
+                    costoBase=costoBase+(costoBase*0.10);
+                }else if(edad>40){
+                    costoBase=costoBase+(costoBase*0.20);
+                }
+                document.write("El costo a pagar es de: "+costoBase+
+                    "<br> Por la póliza: "+ poliza
+                )
+        }else if(poliza.toUpperCase=="B"){
+            var costoBase=950;
+            if(alcohol=="si"){
+                costoBase=costoBase+(costoBase*0.10);
+                }
+                if(lentes=="si"){
+                    costoBase=costoBase+(costoBase*0.05);
+                }
+                if(enfermedad=="si"){
+                    costoBase=costoBase+(costoBase*0.05);
+                }if(edad<=40){
+                    costoBase=costoBase+(costoBase*0.10);
+                }else if(edad>40){
+                    costoBase=costoBase+(costoBase*0.20);
+                }
+                document.write("El costo a pagar es de:"+costoBase)
+        }
+    </script>
+</body>
+</html>

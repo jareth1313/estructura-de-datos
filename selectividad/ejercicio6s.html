@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 select</title>
+</head>
+<body>
+    <!-- 6.“El náufrago satisfecho” ofrece hamburguesas sencillas, dobles y triples, las cuales tienen un costo de
+     $20.00, $25.00 y $28.00 respectivamente. La empresa acepta tarjetas de crédito con un cargo de 5% sobre la compra. 
+     Suponiendo que los clientes adquieren sólo un tipo de hamburguesa, 
+     realice un programa para determinar cuánto debe pagar una persona por N hamburguesas. -->
+    <script> 
+        var h_sencillas= 20;
+        var h_dobles= 25;
+        var h_triples= 28;
+        var total=0;
+
+        var ti=prompt("Tipo de hamburguesa: (sencilla/doble/triple) ")
+        var n=parseInt(prompt("Cantidad de hamburguesas: "));
+        var tp=prompt("Ingrese el tipo de pago: (efectivo/tarjeta)");
+
+        if(ti=="sencilla"){
+            if(tp=="tarjeta"){
+                var cargo=(h_sencillas*n)*.05;
+                total=cargo+(h_sencillas*n);
+                alert("Cantidad de hamburguesas: "+n+
+                    "\n Total a pagar: "+total
+                )
+            }else{
+                total=h_sencillas*n;
+                alert("Cantidad de hamburguesas: "+n+
+                    "\n Total a pagar: "+total
+                )
+            }
+        }if(ti=="doble"){
+            if(tp=="tarjeta"){
+                var cargo=(h_dobles*n)*.05;
+                total=cargo+(h_dobles*n);
+                alert("Cantidad de hamburguesas: "+n+
+                    "\n Total a pagar: "+total
+                )
+            }else {
+                total=h_dobles*n;
+                alert("Cantidad de hamburguesas: "+n+
+                    "\n Total a pagar: "+total
+                )
+            }
+        }else if(ti=="triple"){
+            if(tp=="tarjeta"){
+                var cargo=(h_triples*n)*.05;
+                total=cargo+(h_triples*n);
+                alert("Cantidad de hamburguesas: "+n+
+                    "\n Total a pagar: "+total
+                )
+            }else{
+                total=h_triples*n;
+                alert("Cantidad de hamburguesas: "+n+
+                    "\n Total a pagar: "+total
+                )
+            }
+        }
+
+    </script>
+</body>
+</html>

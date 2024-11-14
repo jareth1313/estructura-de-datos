@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 select</title>
+</head>
+<body>
+    <!-- 14.Se les dará́ un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; 
+    si tienen 2 años, $200, y así́ sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será́ de $1000.
+    Realice un programa que permita determinar el bono que recibirá́ un trabajador. -->
+    <script>
+        var antiguedad = parseInt(prompt("Ingrese su antigüedad en años: "))
+
+        if(antiguedad == 1){
+            alert("Antigüedad: "+antiguedad+" años"+
+                "\n Bono: 100$")
+        }
+        else if(antiguedad == 2){
+            alert("Antigüedad: "+antiguedad+" años"+
+                "\n Bono: 200$")
+        }
+        else if(antiguedad == 3){
+            alert("Antigüedad: "+antiguedad+" años"+
+                "\n Bono: 300$")
+        }
+        else if(antiguedad == 4){
+            alert("Antigüedad: "+antiguedad+" años"+
+                "\n Bono: 400$")
+        }
+        else if(antiguedad == 5){
+            alert("Antigüedad: "+antiguedad+" años"+
+                "\n Bono: 500$")
+        }
+        else if(antiguedad > 5){
+            alert("Antigüedad: "+antiguedad+" años"+
+                "\n Bono: 1000$")
+        }
+    </script>
+</body>
+</html>

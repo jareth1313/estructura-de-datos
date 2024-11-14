@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 10.Se requiere un programa para determinar, de N cantidades, cuántas son cero, 
+cuántas son menores a cero, y cuántas son mayores a cero. Utilice el ciclo apropiado. -->
+<body>
+    <script>
+        var i=1;
+        var cantidades=parseInt(prompt("Cuantas cantidades ingresará: "));
+        var j=0;
+        var k=0;
+        var l=0;
+
+        while(i<=cantidades){
+            var cantidad=parseInt(prompt("Ingrese la cantidad "+i+": "));
+            if(cantidad<0){
+                j++
+            }else if(cantidad==0){
+                k++
+            }else{
+                l++
+            }
+            i++
+        }
+        document.write("Cantidad de numeros menores a 0: "+j);
+        document.write("<br>Cantidad de numeros iguales 0: "+k);
+        document.write("<br>Cantidad de numeros mayores 0: "+l);
+    </script>
+</body>
+</html>

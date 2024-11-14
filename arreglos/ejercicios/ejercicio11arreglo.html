@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 11 </title>
+</head>
+<body>
+    <!-- 11.Crear un programa que lea 100 números por teclado y los ordene descendentemente. Mayor a menor -->
+    <script>
+
+        var numeros=[];
+
+        for(var i=0;i<100;i++){
+            var num=parseInt(prompt("Ingrese el número "+i+": "))
+            numeros.push(num) 
+        }
+        
+        document.write("Números ingresados: <br>")
+        for(i=0;i<numeros.length;i++){
+            document.write(numeros[i]+"  ")
+        }
+
+        document.write("<br>Números de manera descendente: <br>")
+        for(var i=numeros.length-1; i>=0; i--){
+            document.write(numeros[i]+"  ");
+        }
+    </script>
+</body>
+</html>

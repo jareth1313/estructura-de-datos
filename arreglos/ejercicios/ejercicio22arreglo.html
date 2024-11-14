@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 22</title>
+</head>
+<body>
+    <!-- 22.Una compañía distribuye N productos a distintos comercios de la ciudad.
+    Para ello almacena en un arreglo toda la información relacionada con su mercancía:
+    •	Clave
+    •	Descripción
+    •	Existencia
+    •	Mínimo para mantener de existencia.
+    •	Precio Unitario. -->
+    <script>
+        var cant=parseInt(prompt("Ingrese la cantidad de productos: "));
+
+        var clave = []
+        var descripcion = [];
+        var existencia = [];
+        var minimo = [];
+        var precioUnitario = [];
+
+        for (var i=0; i<cant; i++) {
+            var key=prompt("Ingrese la clave del producto "+i+": ");
+            clave.push(key);
+
+            var descrip=prompt("Ingrese la descripción del producto "+i+": ");
+            descripcion.push(descrip);
+
+            var exis=parseInt(prompt("Ingrese la existencia del producto "+i+": "));
+            existencia.push(exis);
+
+            var min=parseInt(prompt("Ingrese el mínimo para mantener de existencia del producto "+i+": "));
+            minimo.push(min);
+            var precio=parseFloat(prompt("Ingrese el precio unitario del producto "+i+": "));
+            precioUnitario.push(precio);
+        }
+
+        for(var j=0;j<cant;j++){
+            document.write("Datos del producto "+j+
+            "<br>Clave: "+clave[j]+
+            " Descripción: "+descripcion[j]+
+            " Existencia: "+existencia[j]+
+            " Mínimo para mantener de existencia: "+minimo[j]+
+            " Precio Unitario: $"+precioUnitario[j].toFixed(2)+"<br>");
+        }
+    </script>
+</body>
+</html>

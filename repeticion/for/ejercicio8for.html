@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 8.Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual 
+durante 6 años. ¿Cuál es su salario al cabo de 6 años?
+¿Qué salario ha recibido en cada uno de los 6 años?
+Realice el programa utilizando el ciclo apropiado. -->
+<body>
+   <script>
+
+    var sal_base = 1500; 
+    var incremento = 0.10; 
+    var year=parseInt(prompt("Ingrese los años para saber su incremento: "));
+
+    for (var i = 1; i <= year; i++) {
+        // Mostrar el salario del año actual
+        document.write("Salario en el año " + i + ": $" + sal_base + "<br>");
+        
+        // Incrementar el salario para el siguiente año
+        sal_base += sal_base * incremento; 
+    }
+
+    // Mostrar el salario final después de 6 años
+    document.write("<br>Salario al cabo de "+year+" años: $" + sal_base);
+
+   </script>
+</body>
+</html>

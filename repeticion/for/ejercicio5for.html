@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 5.Un empleado de la tienda “Tiki Taka” realiza N ventas durante el día, se requiere saber 
+cuántas de ellas fueron mayores a $1000, cuántas fueron mayores a $500 pero menores o iguales 
+a $1000, y cuántas fueron menores o iguales a $500. Además, se requiere saber el monto de lo
+vendido en cada categoría y de forma
+global. Realice un programa que permita determinar lo anterior utilizando el ciclo apropiado. -->
+<body>
+    <script>
+        var venta=0;
+        var venta2=0;
+        var venta3=0;
+        var j=0;
+        var k=0;
+        var l=0;
+        // Cantidad de ventas(cv)
+        var cv=parseInt(prompt("Ingrese la cantidad de ventas realizadas: "));
+        for(var i=1; i<=cv; i++){
+            var precio=parseFloat(prompt("Ingrese el precio de la venta "+i+" :"));
+            if(precio>1000){
+                venta+=precio; // Es lo mismo que poner venta=venta+precio
+                j++
+            }else if(precio>500 && precio<=1000){
+                venta2=venta2+precio;
+                k++;
+            }else if(precio<=500){
+                venta3=venta3+precio;
+                l++
+            }
+        }
+        var total=venta+venta2+venta3;
+        
+        document.write("Ventas mayores a $1000: "+j+"<br>"+"Total: "+venta);
+        document.write("<br>Ventas entre $500 y $1000: "+k+"<br>Total: "+venta2);
+        document.write("<br>Ventas menores a $500: "+l+ "<br>Total: "+venta3);
+        alert("Total de todas las ventas: "+total);
+    </script>
+</body>
+</html>

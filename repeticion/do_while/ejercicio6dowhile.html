@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 6.Una empresa les paga a sus empleados con base en las horas trabajadas en la semana. 
+Para esto, se registran los días que laboró y las horas de cada día.
+Realice un algoritmo para determinar el sueldo semanal de N trabajadores y además calcule 
+cuánto pagó la empresa por los N empleados. Utilice el ciclo apropiado. -->
+<body>
+    <script>
+        var i=1;
+        var can_p=parseInt(prompt("Ingrese la cantidad de empleados: "));
+        var pago_h=parseFloat(prompt("Ingrese el costo por hora: "));
+        var pago=0;
+        var h_total=0;
+        var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sábado"];
+
+        do{
+            
+            var j=0;
+            while(j<6){
+            var horas=parseInt(prompt("Ingrese las horas trabajadas el dia "+dias[j]+" del empleado "+i));
+            h_total+=horas;
+            j++
+            }
+            i++
+        }
+        while(i<=can_p)
+        pago=h_total*pago_h;
+
+        var p_semanal=pago/can_p;
+
+        document.write("Sueldo semanal: "+p_semanal+"<br>"+
+            "Pago total de la empresa: "+pago);
+    </script>
+</body>
+</html>

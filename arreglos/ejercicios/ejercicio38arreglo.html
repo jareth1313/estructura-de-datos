@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 38</title>
+</head>
+<body>
+<!-- 38.Convierta un número entero decimal a su equivalente en representación binaria.  -->
+    <script>
+        var num_decimal = parseInt(prompt("Ingrese un número entero decimal: "));
+        
+        var num_binario = num_decimal.toString(2);
+
+        var binario= [];
+
+        for (var i = 0; i < num_binario.length; i++) {
+            binario.push(num_binario[i]);
+        }
+        document.write("El número decimal " + num_decimal + " en binario es: "+binario);
+    </script>
+</body>
+</html>

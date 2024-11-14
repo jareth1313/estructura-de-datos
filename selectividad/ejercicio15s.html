@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15 select</title>
+</head>
+<body>
+    <!--15.Realice un programa que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas 
+    y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, 
+    de la hora 46 a la 50, el triple, y que trabajar más de 50 horas no está permitido. -->
+    <script>
+        var horas=parseInt(prompt("Ingrese sus horas trabajadas: "));
+        var pago_h=parseInt(prompt("Ingrese el pago por hora: "));
+        var sueldo=0;
+
+        if(horas<41){
+        sueldo=horas*pago_h;
+        alert("Horas trabajadas: "+horas+
+            "\nPago semanal: "+sueldo
+        )
+        } else if(horas >40 && horas < 46){
+        sueldo=(40*pago_h)+((horas-40)*2*pago_h);
+        alert("Horas trabajadas: "+horas+
+            "\nPago semanal: "+sueldo
+        )
+        } else if(horas >45 && horas <= 50){
+        sueldo=(40*pago_h)+(5*2*pago_h)+((horas-45)*3*pago_h);
+        alert("Horas trabajadas: "+horas+
+            "\nPago semanal: "+sueldo
+        )
+        }else(
+            alert("No puede trabajar más de 50 horas")
+        )
+        
+
+    </script>
+</body>
+</html>

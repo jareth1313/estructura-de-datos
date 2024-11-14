@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2.Se requiere un programa para obtener la estatura promedio de un grupo de personas,
+    cuyo número de miembros se desconoce,
+    el ciclo debe efectuarse siempre y cuando se tenga una estatura registrada. -->
+    <script>
+        var i=1;
+        var suma=0;
+        var promedio=0;
+
+        var personas=parseInt(prompt("Ingrese la cantidad de personas: "));
+        do{
+            var estatura=parseFloat(prompt("Ingrese la estatura "+i));
+
+            suma=suma+estatura;
+
+            prom=suma/i; //Se divide entre i por si el programa se interrumpe nos de un resultado con lo que se haya ingresado.
+            i++
+        }
+        while(i<=personas)
+        document.write("La estatura promedio es: "+prom);
+    </script>
+</body>
+</html>

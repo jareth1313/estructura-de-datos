@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 13.Realice el programa para determinar cuánto pagará una persona que adquiere N artículos, 
+los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le
+aplica un descuento de 15%, y si su precio es mayor a $100 pero menor a $200, el descuento
+es de 12%; de lo contrario, sólo se le aplica 10%. Se debe saber cuál es el costo y el 
+descuento que tendrá́ cada uno de los artículos y 
+finalmente cuánto se pagará por todos los artículos obtenido. -->
+<body>
+    <script>
+        var i=1;
+        var c_articulo=parseInt(prompt("Ingrese la cantidad de artículos: "));
+        var total_art=0
+        var descuento=0;
+        var art=0;
+
+        do{
+            var p_articulo=parseFloat(prompt("Ingrese el precio del artículo "+i+": "));
+            descuento=0;
+            total_art=0;
+            if(p_articulo>=200){
+                descuento+=p_articulo*0.15;
+                total_art+=p_articulo-descuento;
+               document.write("<br>Costo del artículo "+i+": $"+p_articulo+
+                "<br>Descuento: $"+descuento+"<br>Total a pagar por el artículo "+i+": $"+total_art+
+                "<br>");
+            }else if(p_articulo<200 && p_articulo>100){
+                descuento+=p_articulo*0.12;
+                total_art+=p_articulo-descuento;
+                document.write("Costo del artículo "+i+": $"+p_articulo+
+                "<br>Descuento: $"+descuento+"<br>Total a pagar por el artículo "+i+": $"+total_art+
+                "<br>");
+            }else{
+                descuento+=p_articulo*0.10;
+                total_art+=p_articulo-descuento;
+                document.write("<br>Costo del artículo "+i+": $"+p_articulo+
+                "<br>Descuento: $"+descuento+"<br>Total a pagar por el artículo "+i+": $"+total_art+
+                "<br>");
+            }
+            i++
+            art+=total_art;
+        }
+        while(i<=c_articulo)
+        
+        document.write("<br>Total a pagar por "+c_articulo+" artículo/s: $"+art);
+    </script>
+</body>
+</html>

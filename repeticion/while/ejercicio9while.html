@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 9.“El náufrago satisfecho” ofrece hamburguesas sencillas (S), dobles (D) y triples (T), 
+las cuales tienen un costo de $20, $25 y $28 respectivamente. La empresa acepta tarjetas de 
+crédito con un cargo de 5% sobre la compra. Suponiendo que los clientes adquieren N hamburguesas,
+    las cuales pueden ser de diferente tipo,
+    realice un programa para determinar cuánto deben pagar. -->
+<body>
+    <script>
+        var c_h=parseInt(prompt("Ingrese la cantidad de hamburguesas: "));
+        var h_senci=20;
+        var h_doble=25;
+        var h_triple=28;
+        var costo_h=0;
+        var i=1;
+        while(i<=c_h){
+            var tipo_h=prompt("Ingrese el tipo de hamburguesa (S, D, T)");
+            var tarjeta=prompt("¿Pagará con tarjeta? (si/no)")
+
+            if(tarjeta=="si" || tarjeta=="SI"){
+                if(tipo_h=="S" || tipo_h=="s"){
+                costo_h+=h_senci*1.05;
+                }else if(tipo_h=="D" || tipo_h=="d"){
+                costo_h+=h_doble*1.05;
+                }else if(tipo_h=="T" || tipo_h=="t"){
+                    costo_h+=h_triple*1.05;
+                }else{
+                    alert("Tipo de hamburguesa no válida");
+                }
+            }else{
+                if(tipo_h=="S" || tipo_h=="s"){
+                costo_h+=h_senci;
+                }else if(tipo_h=="D" || tipo_h=="d"){
+                costo_h+=h_doble;
+                }else if(tipo_h=="T" || tipo_h=="t"){
+                    costo_h+=h_triple;
+                }else{
+                    alert("Tipo de hamburguesa no válida");
+                }
+            }
+            i++
+        }
+        document.write("Total de hamburgesas: "+c_h+
+            "<br>Total a pagar: $"+costo_h);
+    </script>
+</body>
+</html>

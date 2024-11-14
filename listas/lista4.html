@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+</head>
+<body>
+    <script>
+        //Lista dinámica
+        var tam=parseInt(prompt("¿Cuántos alumnos desea agregar a la lista?"));
+        var alumnos=[];
+
+        for(var i = 0; i < tam; i++) {
+        var nombre = prompt("Ingresa el nombre del alumno:");
+        var edad = parseInt(prompt("Ingresa la edad del alumno:"));
+        var carrera = prompt("Ingresa la carrera del alumno:");
+        
+        alumnos.push({nombre, edad, carrera});
+        }
+
+        //El json imprime la lista, convirtiendola a una cadena de carácteres.
+        document.write("alumnos"+JSON.stringify(alumnos)+"<br><br>")
+
+        var nombres=alumnos.map(alumnos=>alumnos.nombre)
+        document.write("Nombres"+JSON.stringify(nombres)+"<br><br>")
+
+         var orden=alumnos.sort((a,b)=>b.edad-a.edad);
+        document.write("Orden"+JSON.stringify(orden)+"<br><br>")
+
+                                //estudiante es un alias, primero se pone un alias
+        var mayor20=alumnos.filter(estudiante=>estudiante.edad>20)
+        document.write("Mayores a 20"+JSON.stringify(mayor20)+"<br><br>")
+
+    </script>
+</body>
+</html>

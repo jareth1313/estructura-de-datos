@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 17</title>
+</head>
+<body>
+    <!-- 17.Desarrollar un programa que lea 10 números por teclado 5 para un arreglo y
+     5 para otro arreglo distinto mostrar los 10 números en pantalla mediante un solo arreglo  -->
+    <script>
+        var arreglo1 = [];
+        var arre2 = [];
+        var arre_unidos = [];
+        var i;
+        
+        for (i = 0; i < 5; i++) {
+            var val = parseFloat(prompt("Ingrese el valor " + i + " para el primer arreglo:"));
+            arreglo1.push(val);
+        }
+
+        for (i = 0; i < 5; i++) {
+            var val = parseFloat(prompt("Ingrese el valor " + i + " para el segundo arreglo:"));
+            arre2.push(val);
+        }
+        arre_unidos = arreglo1.concat(arre2);
+
+        document.write("Primer arreglo: " + arreglo1 + "<br>");
+        document.write("Segundo arreglo: " + arre2 + "<br>");
+        document.write("Arreglos combinados: " + arre_unidos);
+
+    </script>
+</body>
+</html>

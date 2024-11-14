@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 47</title>
+</head>
+<body>
+ <!--47.Una aplicación de las computadoras es dibujar gráficos de barra(llamados histogramas). Escriba un programa que
+dibuje un gráfico como el siguiente donde la cantidad de asteriscos de cada línea corresponda al número que está a la par. -->
+    <script>
+        var numeros = [3, 5, 7, 9];
+        
+        for (var i = 0; i < numeros.length; i++) {
+            var aux = numeros[i];
+            var asterisco = ""; 
+
+            // Generar asteriscos
+            for (var j = 0; j < aux; j++) {
+                asterisco += "*";
+            }
+            document.write(numeros[i] + ". | " + asterisco + "<br>");
+        }
+        document.write("    |__________<br>");
+
+    </script>
+</body>
+</html>

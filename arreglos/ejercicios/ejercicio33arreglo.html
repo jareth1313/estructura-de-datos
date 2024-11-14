@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 33</title>
+</head>
+<body>
+<!-- 33.Genere aleatoriamente un arreglo de tamaño 20 con números entre 0 y 150 y genere otras tres listas con los siguientes criterios: 
+a.	Si los números están comprendidos entre 0 y 50 irán en la lista 1. 
+b.	Si los números están comprendidos entre 51 y 100 irán en la lista 2. 
+c.	Si los números son mayores a 101 irán en la lista 3. 
+Al final imprimir las cuatro listas. -->
+    <script>
+
+    var numeros = [];
+    for (var i = 0; i < 20; i++) {
+        numeros.push(Math.floor(Math.random() * 151));
+    }
+    var lista1 = [];
+    var lista2 = []; 
+    var lista3 = []; 
+
+    for (var i = 0; i < numeros.length; i++) {
+        if (numeros[i] >= 0 && numeros[i] <= 50) {
+            lista1.push(numeros[i]);
+        } else if (numeros[i] >= 51 && numeros[i] <= 100) {
+            lista2.push(numeros[i]);
+        } else if (numeros[i] > 100) {
+            lista3.push(numeros[i]);
+        }
+    }
+    document.write("Números originales: " + numeros + "<br><br>");
+    document.write("Lista 1, de 0 a 50: " + lista1 + "<br><br>");
+    document.write("Lista 2, de 51 a 100: " + lista2 + "<br><br>");
+    document.write("Lista 3, mayores a 100: " + lista3 + "<br><br>");
+    </script>
+</body>
+</html>

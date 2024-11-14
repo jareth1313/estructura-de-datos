@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 4</title>
+</head>
+<body>
+    <!-- 4.Realice un programa que calcule la media aritmética de N valores,
+     además imprima los números ingresados en orden inverso. -->
+    <script>
+        var numeros = [];
+        var suma=0;
+        var media=0;
+
+        var tam=parseInt(prompt("Ingrese la cantidad de elementos: "));
+        document.write("Números ingresados: <br>");
+        for(var i=0; i<tam; i++){
+            var val=parseFloat(prompt("Ingrese el valor "+i+": "));
+            numeros.push(val); //Registramos los valores que se ingresen.
+            
+            suma+=numeros[i]; 
+            media=suma/numeros.length;
+            document.write(numeros[i]+" ");
+        }
+        document.write("<br>Media = "+media+"<br>")
+        
+        document.write("Números ingresados de manera invertida: <br>")
+        for(var i=numeros.length-1; i>=0; i--){
+            document.write(numeros[i]+" ");
+        }
+    </script>
+</body>
+</html>

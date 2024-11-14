@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 select</title>
+</head>
+<body>
+    <!-- 8.El dueño de un estacionamiento requiere un programa que le permita determinar cuánto debe cobrar por 
+    el uso del estacionamiento a sus clientes. Las tarifas que se tienen son las siguientes:
+    Las dos primeras horas a $5.00 c/u.
+    Las siguientes tres a $4.00 c/u.
+    Las cinco siguientes a $3.00 c/u.
+    Después de diez horas el costo por cada una es de dos pesos. -->
+    <script>
+
+    var Total = 0;
+    var horas=parseInt(prompt("Ingrese las horas a estacionasrse: "));
+    
+    if(horas <= 2) {
+        Total = horas * 5;
+        alert("Total a pagar: "+Total)
+    } else if (horas <= 5) {
+        Total = (2 * 5) + ((horas - 2) * 4);
+        alert("Total a pagar: "+Total)
+    } else if (horas <= 10) {
+        Total = (2 * 5) + (3 * 4) + ((horas - 5) * 3);
+        alert("Total a pagar: "+Total)
+    } else{ 
+        Total = (2 * 5) + (3 * 4) + (5 * 3) + ((horas - 10) * 2);
+        alert("Total a pagar: "+Total)
+    }
+    </script>
+</body>
+</html>

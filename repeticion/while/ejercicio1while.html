@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i=1;
+        suma=0;
+        promedio=0;
+
+        var alumno=parseInt(prompt("Ingrese la cantidad de personas: "));
+        while(i<=alumno){
+            var edad=parseInt(prompt("Ingrese la de edad del alumno "+i));
+
+            suma=suma+edad;
+ 
+            prom=suma/i;
+            i++
+        }
+        document.write("La edad promedio es: "+prom);
+    </script>
+</body>
+</html>

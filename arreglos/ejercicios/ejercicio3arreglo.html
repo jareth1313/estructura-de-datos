@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 3</title>
+</head>
+<body>
+    <!-- 3.Crear un arreglo que solicite 10 numeros y de ellos saque el digito mayor y muestre tambien su posicion dentro
+    del arreglo. No se pueden introducir numeros repetidos. -->
+    <script>
+        var numeros = [];
+        var i = 0;
+        while(i < 10) {
+            var num = parseFloat(prompt("Ingrese el número " + i))
+            if(!numeros.includes(num)) {
+                numeros.push(num)
+                i++
+            } else {
+                alert("Número repetido, ingrese otro.")
+            }
+        }
+
+        var max = numeros[0]
+        var pos = 0
+
+        for(i = 0; i < numeros.length; i++) {
+            if(numeros[i] > max) {
+                max = numeros[i]
+                pos = i
+            }
+        }
+        document.write("Valor máximo: " + max + "<br>")
+        document.write("Posición: " + pos)
+
+    </script>
+</body>
+</html>

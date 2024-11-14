@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 1</title>
+</head>
+<body>
+    <!-- 1.Diseña un programa con un arreglo de 20 elementos llamado pares y guarda los 20 primeros números pares en dicho
+    arreglo, muestra en pantalla el contenido del arreglo. -->
+    <script>
+        var pares=[];
+        for(var i=0;i<20;i++){
+            pares[i]=parseInt(prompt("Ingrese el número "+i+" :"));
+            if(pares[i]%2==0){
+            document.write("Número par "+ i+": "+pares[i]+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

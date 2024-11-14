@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17 select</title>
+</head>
+<body>
+    <!-- 17.Realice un programa que, con base en una calificación proporcionada (0-10), 
+    indique con letra la calificación que le corresponde: 10 es “A”, 9 es “B”,
+    8 es “C”, 7 y 6 son “D”, y de 5 a 0 son “F”. -->
+    <script>
+        var cal=parseInt(prompt("Ingrese su calificación: "))
+
+        if(cal==10){
+            alert("Su calificación es: "+cal+
+            "\nEquivalente a una: A")
+        }else if(cal==9){
+            alert("Su calificación es: "+cal+
+            "\nEquivalente a una: B")
+        }else if(cal==8){
+            alert("Su calificación es: "+cal+
+            "\nEquivalente a una: C")
+        }else if(cal == 7 || cal==6){
+            alert("Su calificación es: "+cal+
+            "\nEquivalente a una: D")
+        }else{
+            alert("Su calificación es: "+cal+
+            "\nEquivalente a una: F")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 27</title>
+</head>
+<body>
+<!--27.Almacene en un arreglo la temperatura de cada día de una determinada semana y que realice lo siguiente:
+a.	La temperatura promedio.
+b.	Un arreglo que contenga las diferencias de cada temperatura con respecto al promedio.
+c.	La menor temperatura y el número de día en que ocurrió.
+d.	La mayor temperatura y el número de día en que ocurrió. -->
+    <script>
+        var temperaturas = [];
+        var suma = 0;
+        var diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+        for (var i = 0; i < 7; i++) {
+            var temp = parseFloat(prompt("Ingrese la temperatura para el día " + diasSemana[i] + ":"));
+            temperaturas.push(temp);
+            suma += temp;
+        }
+        var temp_promedio = suma / temperaturas.length;
+
+        var diferencias = [];
+        for (var i = 0; i < temperaturas.length; i++) {
+            var diferencia = temperaturas[i] - temp_promedio;
+            diferencias.push(diferencia);
+        }
+        var temp_min = temperaturas[0];
+        var diaMin = 0;
+        for (var i = 1; i < temperaturas.length; i++) {
+            if (temperaturas[i] < temp_min) {
+                temp_min = temperaturas[i];
+                diaMin = i;
+            }
+        }
+        var temp_max = temperaturas[0];
+        var diaMax = 0;
+        for (var i = 1; i < temperaturas.length; i++) {
+            if (temperaturas[i] > temp_max) {
+                temp_max = temperaturas[i];
+                diaMax = i;
+            }
+        }
+        document.write("Temperatura promedio: " + temp_promedio.toFixed(1) + " grados Celsius.<br>");
+        
+        document.write("<br>Diferencias respecto al promedio:<br>");
+        for (var i = 0; i < diferencias.length; i++) {
+            document.write("Día " + diasSemana[i] + ": " + diferencias[i].toFixed(1) + " grados de diferencia.<br>");
+        }
+
+        document.write("<br>La menor temperatura fue de " + temp_min + " grados Celsius el " + diasSemana[diaMin] + ".<br>");
+        document.write("La mayor temperatura fue de " + temp_max + " grados Celsius el " + diasSemana[diaMax] + ".<br>");
+    </script>
+</body>
+</html>

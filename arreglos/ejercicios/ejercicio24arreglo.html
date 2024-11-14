@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 24</title>
+</head>
+<body>
+<!-- 24.Al momento de su ingreso al hospital, a un paciente se le solicitan los siguientes datos:
+•	Nombre
+•	Edad
+•	Sexo
+•	Domicilio: 
+o	Calle
+o	Número
+o	Ciudad
+•	Teléfono
+•	Seguro (este campo tendrá el valor VERDADERO si el paciente tiene seguro médico y FALSO en otro caso).
+Escriba un programa que pueda llevar a cabo las siguientes operaciones:
+a)	Listar los nombres de todos  los pacientes hospitalizados.
+b)	Obtener el porcentaje de pacientes hospitalizados en las siguientes categorías (dadas por la edad):
+a.	Niños: hasta 13 años.
+b.	Jóvenes: mayores de 13 años y menores de 30
+c.	Adultos: mayores de 30 años.
+c)	Obtener el porcentaje de hombres y de mujeres hospitalizados.
+d)	Dado el nombre de un paciente, listar todos los datos relacionados con dicho paciente. -->
+    <script>
+        var cantidad=parseInt(prompt("Ingrese la cantidad de pacientes: "));
+
+        var nombres=[];
+        var edad=[];
+        var sexo=[];
+        var domicilio=[];
+        var calle=[];
+        var numero=[];
+        var ciudad=[];
+        var telefono=[];
+        var seguro=[];
+
+        for(var i=0;i<cantidad;i++){
+            var nom=prompt("Ingrese el nombre del paciente "+i+": ");
+            nombres.push(nom);
+
+            var años=parseInt(prompt("Ingrese la edad del paciente "+i+": "));
+            edad.push(años);
+
+            var sex=prompt("Ingrese el sexo del paciente "+i+": (M/F)");
+            sexo.push(sex);
+
+            var domici=prompt("Ingrese el domicilio del paciente "+i+": ");
+            domicilio.push(domici);
+
+            var street=prompt("Ingrese la calle del paciente "+i+": ");
+            calle.push(street);
+
+            var num_casa=parseFloat(prompt("Ingrese el número de casa del paciente "+i+": "));
+            numero.push(num_casa);
+
+            var residencia=prompt("Ingrese la ciudad donde se encuentra el paciente "+i+": ");
+            ciudad.push(residencia);
+
+            var tel=prompt("Ingrese el teléfono del paciente "+i+": ");
+            telefono.push(tel);
+
+            var asegurado=prompt("¿El paciente "+nom+" cuenta con seguro? (s/n)");
+
+            if (asegurado.toLowerCase() == "s"){
+                seguro.push("Con seguro");
+            }else if(asegurado.toLowerCase()=="n"){
+                seguro.push("Sin seguro");
+            }
+        }
+
+        var niños=0;
+        var jovenes=0;
+        var adultos=0;
+        var porcen_niños;
+        var porcen_jovenes;
+        var porcen_adultos
+        for(var i=0;i<edad.length;i++){
+            if(edad[i]<=13){
+                niños++
+                porcen_niños=(niños/100)*edad.length;
+            }else if(edad[i]>13 && edad[i<30]){
+                jovenes++
+                porcen_jovenes=(jovenes/100)*edad.length;
+            }else{
+                adultos++ 
+                porcen_adultos=(adultos/100)*edad.length;
+            }     
+        }
+
+        var genero=0;
+        var porcen_m=0;
+        var porcen_h=0;
+        for(var i=0;i<sexo.length;i++){
+            if(sexo[i]=="F" ){
+                genero++
+                porcen_m=(genero/100)*sexo.length;
+            }else if(sexo[i]=="M"){
+                genero++
+                porcen_h=(genero/100)*sexo.length;
+            }else{
+                alert("Género no reconocido")
+            }
+        }
+
+        document.write("Nombres de los pacientes: <br>"+nombres+" ");
+        document.write("<br>--Estatus del seguro: <br>"+seguro+" ")
+        document.write("<br>--Porcentaje de Niños: %"+porcen_niños)
+        document.write("<br>--Porcentaje de Jóvenes: %"+porcen_jovenes);
+        document.write("<br>--Porcentaje de Adultos: %"+porcen_adultos);
+        document.write("<br>--Porcentaje de Mujeres: %"+porcen_m);
+        document.write("<br>--Porcentaje de Hombre: %"+porcen_h);
+
+        var buscar=prompt("Ingrese el nombre del paciente a buscar: ")
+        for(var i=0;i<nombres.length;i++){
+            if(nombres[i]==buscar){
+                document.write("<br>El paciente "+nombres[i]+
+                " tiene "+edad[i]+
+                " años, de sexo "+sexo[i]+
+                ", con domicilio en "+domicilio[i]+", calle "+calle[i]+" y número "+numero[i]+
+                ", residente de la ciudad de "+ciudad[i]+". <br>--Teléfono: "+telefono[i]+". <br>--Seguro: "+
+            seguro[i]);
+                }
+            }
+    </script>
+</body>
+</html>

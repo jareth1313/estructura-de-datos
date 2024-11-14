@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 48</title>
+</head>
+<body>
+<!-- 48.Escribir un programa que visualice la siguiente salida -->
+    <script>
+        var n = 4;
+        var piramide = [];
+
+        for (var i = 1; i <= n; i++) {
+            var fila = "";
+        
+            for (var j = 1; j <= i; j++) {
+                fila += j + "&nbsp&nbsp";
+            }
+            piramide.push(fila);
+        }
+
+        for (var i = n - 1; i >= 1; i--) {
+            var fila = "";
+            for (var j = 1; j <= i; j++) {
+                fila += j + "&nbsp&nbsp";
+            }
+            piramide.push(fila);
+        }
+        for (var i = 0; i < piramide.length; i++) {
+            document.write(piramide[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

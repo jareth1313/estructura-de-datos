@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Selec</title>
+</head>
+<body>
+    <script>
+
+        var total=0;
+        var lap=parseInt(prompt("Ingrese la cantidad de lapices: "))
+
+        if(lap>=1000){
+            var total=lap*0.85;
+
+            document.write("El precio por 1000 o más lapices es de 85c, el total a pagar es: "
+            +total)
+        }else{
+            total=lap*0.90;
+            document.write("El precio por 1000 o más lapices es de 85c, el total a pagar es: "
+            +total)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 37</title>
+</head>
+<body>
+<!-- 37.Almacene en un arreglo de n números enteros (máximo 30) y determine cuántos números terminan en dígito primo. -->
+    <script>
+        var numeros = [];
+        var tam= parseInt(prompt("Ingrese la cantidad de números enteros a almacenar (máximo 30): "));
+        var num_primos = 0;
+
+        for (var i = 0; i < tam; i++) {
+            var num = parseInt(prompt("Ingrese el número entero " + (i + 1) + ":"));
+            numeros.push(num);
+
+            var ultimo_digito = num % 10;
+
+            if (ultimo_digito === 2 || ultimo_digito === 3 || ultimo_digito === 5 || ultimo_digito === 7) {
+                num_primos++;
+            }
+        }
+        document.write("Números ingresados: " + numeros + "<br>");
+        document.write("Cantidad de números que terminan en dígito primo: " + num_primos + "<br>");
+    </script>
+</body>
+</html>

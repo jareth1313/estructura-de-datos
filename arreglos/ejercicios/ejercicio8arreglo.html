@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 8</title>
+</head>
+<body>
+    <!--8. Lea 4 números y almacénelo en un arreglo llamado “A”, y otros 4 números en un arreglo llamada “B”, 
+    determine cuantos números de A se encentran en “B”. -->
+    <script>
+        var A = [];
+        var B = [];
+    
+        for (var i = 0; i < 4; i++) {
+            var num1 = parseInt(prompt("Ingrese el número "+i+" para el arreglo A: "));
+            A.push(num1);
+        }
+        for (var i = 0; i < 4; i++) {
+            var num2 = parseInt(prompt("Ingrese el número "+i+" para el arreglo B: "));
+            B.push(num2);
+        }
+    
+        var num_iguales = 0;
+        var mismos=[];
+        for (var i = 0; i < A.length; i++) {
+            if(B.includes(A[i])) {
+                num_iguales++;
+                mismos.push(A[i]);
+            }
+        }
+        document.write("Números iguales en ambos arreglos: <br>");
+        for(i=0;i<mismos.length;i++){
+            document.write(mismos[i]+" ");
+        }
+
+        document.write("<br>Cantidad de números que hay en A y en B: " + num_iguales);
+    </script>
+    
+</body>
+</html>

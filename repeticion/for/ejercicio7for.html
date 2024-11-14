@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!-- 7.La cadena de tiendas de autoservicio “El mandilón” cuenta con sucursales en C ciudades 
+diferentes de la República, en cada ciudad cuenta con T tiendas y cada tienda cuenta con N 
+empleados, asimismo, cada una registra lo que vende de manera individual cada empleado, 
+cuánto fue lo que vendió́ cada tienda, cuánto se vendió́ en cada ciudad y cuánto recaudó la
+cadena en un solo día. Realice un programa para determinar lo anterior utilizando el ciclo apropiado. -->
+    <script>
+        var t_tienda=0;
+        var t_ciudad=0;
+        var t_sucu=0;
+
+        var ciudad=parseInt(prompt("Ingrese la cantidad de ciudades que tienen sucursales: "));
+
+        for(var i=1;i<=ciudad;i++){
+            var tienda=parseInt(prompt("Ingrese la cantidad de tiendas que tiene la ciudad "
+            +i));
+            t_ciudad = 0; //Se inicia la variable otra vez en 0 dentro del sico para que limpie los registros y no se queden datos 
+            //acumulados en la variable
+            for(var j=1;j<=tienda;j++){
+                var empleado=parseInt(prompt("Ingrese la cantidad de empleados que tiene la tienda "+
+                j));
+                t_tienda=0;
+
+                for(var k=1;k<=empleado;k++){
+                    var canti_v=parseFloat(prompt("Ingrese la cantidad de venta del empleado "+k));
+                    document.write("<br>Venta del empleado "+k+" de la tienda "+j+": "+canti_v+"$"+"<br>");
+                    t_tienda+=canti_v;
+                }
+                t_ciudad+=t_tienda;
+                document.write("<br>Total de la tienda "+j+": "+t_tienda+"$"+"<br>");
+            }
+            t_sucu+=t_ciudad;
+            document.write("<br>Total de la ciudad "+i+": "+t_ciudad+"$"+"<br>");
+        }
+        document.write("<br>El total recaudado al día es: "+t_sucu+"$");
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 40</title>
+</head>
+<body>
+<!--40.Almacene en un arreglo n números (n debe ser un numero par, y como máximo 50), valide si el tamaño 
+es par e invertir los elementos a la mitad del arreglo. Imprimir el vector original y el invertido.-->
+
+    <script>
+        var numeros = [];  
+
+        var tam=parseInt(prompt("Ingrese el tamaño: (Max 50) "))
+        for(var i=0;i<tam;i++){
+            numeros.push(prompt("Ingrese el número "+i));
+        }
+        var n = numeros.length;
+
+        if (n % 2 === 0 && n <= 50) {
+            document.write("Arreglo original:<br>"+numeros + "<br>");
+            
+            var mitad = n / 2;
+            for (var i = 0; i < mitad/2; i++) {
+                var temp = numeros[i];
+                numeros[i] = numeros[mitad - 1 - i];
+                numeros[mitad - 1 - i] = temp;
+            }
+            document.write("Arreglo con la primera mitad invertida:<br>"+ numeros);
+
+        } else {
+            document.write("El tamaño del arreglo no es válido. Debe ser un número par y como máximo 50.");
+        }
+    </script>
+</body>
+</html>

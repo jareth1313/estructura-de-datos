@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.Se requiere un algoritmo para obtener la edad promedio de un grupo de N alumnos. 
+    Realice el programa, utilizando los tres tipos de estructuras de ciclo (For, While, Do While). -->
+    <script>
+        var suma=0;
+        var promedio=0;
+        var alumno=parseInt(prompt("Ingrese la cantidad de alumnos: "));
+
+        for(var i=1; i<=alumno;i++){
+            var edad=parseInt(prompt("Ingrese la de edad del alumno "+i));
+
+            suma=suma+edad;
+
+            prom=suma/i; //Se divide entre i por si el programa se interrumpe nos de un resultado con lo que se haya ingresado.
+        }
+        document.write("La edad promedio es: "+prom);
+
+    </script>
+</body>
+</html>

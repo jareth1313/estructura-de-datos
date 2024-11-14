@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 32</title>
+</head>
+<body>
+<!-- 32.Almacene en un arreglo n elementos de tipo real (máximo 25) e imprima los siguientes valores:
+a.	Máximo.
+b.	Mínimo.
+c.	La media de los que estén en posiciones pares.
+d.	La varianza. -->
+    <script>
+        var numeros=[]
+        var tam=parseInt(prompt("Ingrese el tamaño del arreglo: (Max 25)"))
+		for(i=0;i<tam;i++){
+			var num=(parseFloat(prompt("Ingrese el número "+i+": ")));
+            numeros.push(num)
+		}
+
+		var num_max=numeros[0];
+		var num_min=numeros[0];
+
+        var suma=0
+		for(i=0;i<tam;i++){
+			suma+=numeros[i];
+			if(numeros[i]<num_min){
+				num_min=numeros[i];
+			}
+			if(numeros[i]>num_max){
+				num_max=numeros[i];
+			}
+		}
+
+        var media=0
+        var varianza=0;
+		media=suma/tam;
+		for(i=0;i<tam;i++){
+			varianza+=(numeros[i]-media)*(numeros[i]-media);
+		}
+        
+		varianza=varianza/tam;
+        document.write("Números ingresados: <br>"+numeros)
+		document.write("<br> Número máximo: "+num_max+"<br>");
+		document.write("Número mínimo: "+num_min+"<br>");
+		document.write("Media: "+media+"<br>");
+		document.write("Varianza: "+varianza);
+    </script>
+</body>
+</html>

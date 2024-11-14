@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22 select</title>
+</head>
+<body>
+    <!-- 22.Dado como dato el tiempo de servicio de un trabajador, considere un aumento del 15% si la categoría del 
+    trabajador es A, un 12% en caso de que la categoría sea B, si la categoría es C, un aumento del 10% y para
+    la categoría D se aumentará $15.00 Imprima el sueldo con el aumento incorporado,
+    la categoría y el tiempo de servicio del trabajador. -->
+    <script>
+        var tiempo=parseInt(prompt("Ingrese los años de servicio: "));
+        var sueldoactual=parseFloat(prompt("Ingrese su sueldo actual: "));
+        var newsueldo=0;
+
+        if(tiempo>20 && tiempo<=30){
+            newsueldo=sueldoactual*1.15;
+            alert("Sueldo: "+sueldoactual+
+                "\nNuevo sueldo: "+newsueldo+
+                "\nCategoría: A"+"\nAños de servicio: "+tiempo);
+        }else if(tiempo>15 && tiempo<=20){
+            newsueldo=sueldoactual*1.12;
+            alert("Sueldo: "+sueldoactual+
+                "\nNuevo sueldo: "+newsueldo+
+                "\nCategoría: B"+"\nAños de servicio: "+tiempo);
+        }else if(tiempo>10 && tiempo<=15){
+            newsueldo=sueldoactual*1.10;
+            alert("Sueldo: "+sueldoactual+
+                "\nNuevo sueldo: "+newsueldo+
+                "\nCategoría: C"+"\nAños de servicio: "+tiempo);
+        }else{
+            newsueldo=sueldoactual+15;
+            alert("Sueldo: "+sueldoactual+
+                "\nNuevo sueldo: "+newsueldo+
+                "\nCategoría: C"+"\nAños de servicio: "+tiempo);
+        }
+
+    </script>
+</body>
+</html>

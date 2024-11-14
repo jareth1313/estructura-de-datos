@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 9</title>
+</head>
+<body>
+<!--9.Crear un programa que lea la cantidad de números deseada por el cliente y no permita introducir números repetidos. -->
+    <script>
+        var numeros=[];
+
+        tam=parseInt(prompt("Ingrese la cantidad de datos a ingresar: "));
+        for(var i=0;i<tam;i++){
+            var num=parseInt(prompt("Ingrese el número "+i+": "));
+            if(!numeros.includes(num)) {
+                numeros.push(num)
+            } else {
+                alert("Número repetido, ingrese otro.")
+                i--
+            }
+        }
+        document.write("Números ingresados: <br>");
+        for(i=0;i<numeros.length;i++){
+            document.write(numeros[i]+" ");
+        }
+    </script>
+</body>
+</html>

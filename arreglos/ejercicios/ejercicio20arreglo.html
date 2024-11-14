@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 20</title>
+</head>
+<body>
+    <!-- 20.Desarrolle un programa que rellene un arreglo con 20
+     números y luego busque un numero en concreto y devuelva la posición del mismo. -->
+    <script>
+        var numeros=[];
+        var i=0;
+
+        document.write("Números en el arreglo: <br>")
+        while(i<20){
+            numeros.push(i);
+            i++
+        }
+        document.write(numeros)
+
+        var buscar=parseInt(prompt("Ingrese el número a buscar su posición: "));
+
+        var pos=numeros.indexOf(buscar);
+        if(pos!=-1){
+            document.write("<br>El número "+buscar+" se encuentra en la posición "+pos+" del arreglo.");
+        }else{
+            document.write("<br>El número "+buscar+" no se encuentra en el arreglo.");
+        }  
+    </script>
+</body>
+</html>

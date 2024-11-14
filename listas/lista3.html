@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3</title>
+</head>
+<body>
+    <!--Hacer una lista donde se almacenen todas las letras del abecedario, mostrar la lista. Despues eliminar las letras 
+    de la lista que se encuentren en la posición de multiplos de 5 -->
+    <script>
+        var letras=[
+        {letra: "a", posicion: 1},
+        {letra: "b", posicion: 2},
+        {letra: "c", posicion: 3},
+        {letra: "d", posicion: 4},
+        {letra: "e", posicion: 5},
+        {letra: "f", posicion: 6},
+        {letra: "g", posicion: 7},
+        {letra: "h", posicion: 8},
+        {letra: "i", posicion: 9},
+        {letra: "j", posicion: 10},
+        {letra: "k", posicion: 11},
+        {letra: "l", posicion: 12},
+        {letra: "m", posicion: 13},
+        {letra: "n", posicion: 14},
+        {letra: "o", posicion: 15},
+        {letra: "p", posicion: 16},
+        {letra: "q", posicion: 17},
+        {letra: "r", posicion: 18},
+        {letra: "s", posicion: 19},
+        {letra: "t", posicion: 20},
+        {letra: "u", posicion: 21},
+        {letra: "v", posicion: 22},
+        {letra: "w", posicion: 23},
+        {letra: "x", posicion: 24},
+        {letra: "y", posicion: 25},
+        {letra: "z", posicion: 26}
+        ];
+        document.write("Letras"+JSON.stringify(letras)+"<br><br>")
+        
+        var letrassinMultiplosDe5=letras.filter(pos=>pos.posicion%5!=0)
+
+        letras=letrassinMultiplosDe5;
+
+        var letras_bien=letras.map(le=>le.letra)
+
+        
+        document.write("Letras"+JSON.stringify(letras_bien)+"<br><br>")
+
+
+    </script>
+</body>
+</html>

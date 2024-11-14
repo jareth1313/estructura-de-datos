@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 41</title>
+</head>
+<body>
+<!-- 41.Almacene en dos arreglos números reales a y b de 10 elementos cada uno, a partir de ellos genere un tercer arreglo
+con el siguiente criterio: sumar el primer elemento de a más el último elemento de b y luego el segundo elemento de a 
+con el noveno elemento de b y así sucesivamente hasta llegar al décimo elemento de a más el primer elemento de b.
+Imprimir las sumas almacenadas en el arreglo c. -->
+    <script>
+        var a = [31,32,34,35,36,37,38,39,40,41];
+        var b = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+        var c = [];
+
+        for (var i = 0; i < 10; i++) {
+            c[i] = a[i] + b[9 - i];
+        }
+        document.write("Sumas almacenadas en el arreglo c: <br>");
+        document.write(c);
+
+    </script>
+</body>
+</html>

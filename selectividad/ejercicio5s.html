@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 select</title>
+</head>
+<body>
+    <!-- 5.La política de la compañía telefónica “Chimefón” es: “Chismea + x -”. 
+    Cuando se realiza una llamada, el cobro es por el tiempo que ésta dura, 
+    de tal forma que los primeros cinco minutos cuestan $ 1.00 c/u, los siguientes tres, 80¢ c/u, 
+    los siguientes dos minutos, 70¢ c/u, y a partir del décimo minuto, 50¢ c/u. Además,
+     se carga un impuesto de 3% cuando es domingo, y si es día hábil, en turno matutino, 15 %, y 
+     en turno vespertino, 10 %. Realice un algoritmo para determinar cuánto debe pagar por cada
+     concepto una persona que realiza una llamada. -->
+    <script>
+    var Total = 0;
+    var impuesto=0;
+    var minutos=parseInt(prompt("Ingrese los minutos: "));
+    var dia = prompt("Ingrese el día de la semana (domingo/habil): ");
+    var turno=prompt("Ingrese el turno (matutino/vespertino): ")
+    
+    if (minutos <= 5) {
+        Total = minutos * 1.00;
+    } else if (minutos <= 8) {
+        Total = (5 * 1.00) + ((minutos - 5) * 0.80); 
+    } else if (minutos <= 10) {
+        Total = (5 * 1.00) + (3 * 0.80) + ((minutos - 8) * 0.70); 
+    } else {
+        Total = (5 * 1.00) + (3 * 0.80) + (2 * 0.70) + ((minutos - 10) * 0.50); 
+    }
+
+
+    if (dia === "domingo") {
+        impuesto = 0.03; 
+    } else if (dia === "habil") {
+        if (turno === "matutino") {
+            impuesto = 0.15; 
+        } else if (turno === "vespertino") {
+            impuesto = 0.10; 
+        }
+    }
+
+    var tt = Total + (Total * impuesto);
+    document.write("Total a pagar: "+tt)
+     </script>
+</body>
+</html>

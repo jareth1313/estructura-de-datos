@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 14</title>
+</head>
+<body>
+    <!-- 14.Realizar un programa que encuentre los numeros impares del 1 al 100
+     y los ordene y muestre en pantalla decendentemente. -->
+    <script>
+         var impares=[];
+        var i=0;
+         while(i<100){
+            if(i%2!=0){
+                impares.push(i)
+            }
+            i++
+         }
+         for(i=impares.length-1;i>=0;i--){
+            document.write(impares[i]+" ");
+         }
+         
+    </script>
+</body>
+</html>

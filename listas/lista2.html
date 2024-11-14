@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2</title>
+</head>
+<body>
+    <script>
+        //Lista estatica
+        var estudiantes=[
+            {nombre: "Mariana", calificaciones: [8, 9, 10, 8, 9]},
+            {nombre: "Pedro", calificaciones: [9, 9, 9, 9, 9]},
+            {nombre: "Eduardo", calificaciones: [10, 9, 10, 10, 10]},
+            {nombre: "Marco", calificaciones: [8, 8, 8, 8, 9]},
+            {nombre: "Karla", calificaciones: [9, 9, 8, 8, 9]},
+            {nombre: "Martha", calificaciones: [10, 10, 10, 10, 10]},
+            {nombre: "Brayan", calificaciones: [8, 8, 8, 8, 8]}
+        ];
+
+        document.write("alumnos"+JSON.stringify(estudiantes)+"<br><br>")
+
+        var promedio= estudiantes.map(estudiante=>{
+            //El reduce descompone los arreglos anidados para sacar sus resultados individualmente.
+            var suma=estudiante.calificaciones.reduce((total,cal)=>total+cal,0) //aquí se suman todas las calificaciones por separado
+                                                    //total y cal son alias.
+            var prom=suma/estudiante.calificaciones.length; //Se saca el promedio
+            return{...estudiante, prom}//Retorna 
+        })
+        document.write("Se agrega el promedio"+JSON.stringify(promedio)+"<br><br>")
+
+        var maxprom= promedio.reduce((mayor, estudiante) => {
+            return(estudiante.prom > mayor.prom) ? estudiante : mayor;
+        }, promedio[0])
+
+        document.write("Máximo promedio"+JSON.stringify(maxprom)+"<br><br>")
+
+        var orden=promedio.sort((a,b)=>b.prom-a.prom);
+        document.write("Orden"+JSON.stringify(orden)+"<br><br>")
+
+        var mayor8=promedio.filter(cal=>cal.prom>8)
+        document.write("Mayores a 8"+JSON.stringify(mayor8)+"<br><br>")
+    </script>
+</body>
+</html>

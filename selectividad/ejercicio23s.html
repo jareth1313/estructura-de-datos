@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23 select</title>
+</head>
+<body>
+    <!-- 23.Diseñe un programa que permita calcular el día siguiente de una fecha dada. 
+    Asumir que la fecha ingresada es válida. -->
+    <script>
+     var dia = parseInt(prompt("Ingresa el día (1-31):"));
+     var mes = parseInt(prompt("Ingresa el mes (1-12):"));
+     var year = parseInt(prompt("Ingresa el año (2024):"));
+     var dia_mes=0;
+
+     document.write("Día ingresado: "+dia+
+        "<br> Mes ingresado: "+mes+
+        "<br> Año ingresado: "+year+"<br>");
+     
+    if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+        dia_mes = 31;
+    } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+        dia_mes = 30;
+    } else if (mes == 2) {
+        // Verificar si es año bisiesto
+        if ((year % 4 == 0 && year % 100 !== 0) || (year % 400 == 0)) {
+            dia_mes = 29;
+        } else {
+            dia_mes = 28;
+        }
+    }
+     // De esta manera se incrementa el día
+    dia++;
+
+    if (dia > dia_mes) {
+        dia = 1; 
+        mes++;  
+    }
+
+    if (mes > 12) {
+        mes = 1;  
+        year++;  
+    }
+
+    document.write("<br> Día siguiente: "+dia+
+        "<br> Mes siguiente: "+mes+
+        "<br> Año siguente: "+year);
+
+    </script>
+</body>
+</html>

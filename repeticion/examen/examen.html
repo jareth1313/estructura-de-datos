@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var suma=0;
+        var i=0;
+        while(true){
+            var num = parseFloat(prompt("Ingrese un número"));
+            if(num<0){
+                suma += num;
+            }
+            else
+            {
+                break
+            }
+            i++
+        }
+        document.write("Total de números: "+i+
+            "<br>Total de la suma de negativos: "+suma
+        );
+    </script>
+</body>
+</html>

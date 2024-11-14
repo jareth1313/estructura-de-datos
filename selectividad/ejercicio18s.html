@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18 select</title>
+</head>
+<body>
+    <!-- 18.Dado como datos el sueldo de un trabajador, aplíquele un aumento del 17% si su sueldo es inferior a 
+    $1000.00 Imprima en este caso, el nuevo sueldo del trabajador. -->
+    <script>
+        var sueldo=parseInt(prompt("Ingrese su sueldo: "))
+        var aumento=1.17;
+        
+        if(sueldo>=1000){
+            alert("Usted no ocupa aumento, gana bien :b")
+        }else{
+            var nuevoSueldo=sueldo*aumento
+            alert("Su nuevo sueldo es: $"+nuevoSueldo+
+                "\nSu aumento es de: $"+(nuevoSueldo-sueldo).toFixed(2)+
+            "\nAnterior sueldo: "+sueldo);
+        }
+    </script>
+</body>
+</html>

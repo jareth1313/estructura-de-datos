@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 2</title>
+</head>
+<body>
+    <!-- 2.Programa que llene por teclado la nota de los alumnos de una clase y calcula la nota media del grupo.
+    también muestra los alumnos con notas superiores a la media. el número de alumnos se lee por teclado este
+    programa utiliza un arreglo de elementos que contendrá las notas de los alumnos. El tamaño del arreglo será 
+    el número de alumnos de la clase por lo tanto primero se pedirá por teclado el número de alumnos y a continuación 
+    se creará el arreglo. se realizan 3 recorridos sobre el arreglo, el primera para asignar a cada elemento las notas
+    introducidas por el teclado el segundo para sumarlas y 
+    calcular la media, y el tercero para mostrar los alumnos con notas superiores. -->
+    <script>
+        
+        var al=parseInt(prompt("Ingrese la cantidad de estudiantes"));
+        var calificaciones=new Array(al);
+
+        for(var i =0; i<al; i++){
+            calificaciones[i]=parseFloat(prompt("Ingrese la calificacion del alumno "+i));
+        }
+
+        var suma=0;
+        for(var i=0; i<al; i++){
+            suma=suma+calificaciones[i];
+        }
+
+        var media=suma/al;
+        document.write("Media: "+media+"<br>")
+
+        for(var i=0; i<al; i++){
+            if(calificaciones[i]>media){
+                document.write("Calificaciones mayores a la media: "+calificaciones[i]+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

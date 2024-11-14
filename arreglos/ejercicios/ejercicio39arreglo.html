@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 39</title>
+</head>
+<body>
+    <!-- 39.Almacene en un arreglo n números enteros y determine ¿cuántas veces se repite cada uno de ellos? -->
+    <script>
+        var numeros = [];
+
+        var tam=parseInt(prompt("Ingrese el tamaño del arreglo: "))
+        for(var i=0;i<tam;i++){
+            numeros.push(prompt("Ingrese el número "+i));
+        }
+        var repeticiones = [];
+
+        for (var i = 0; i < numeros.length; i++) {
+            var numero = numeros[i];
+            if (repeticiones[numero]) {
+                repeticiones[numero]++; 
+            } else {
+                repeticiones[numero] = 1;
+            }
+        }
+        document.write("Repeticiones de cada número: <br>");
+        for (var numero in repeticiones) {
+            document.write("Número " + numero + " se repite " + repeticiones[numero] + " veces.<br>");
+        }
+    </script>
+</body>
+</html>

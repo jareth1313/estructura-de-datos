@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 15</title>
+</head>
+<body>
+    <!-- 15.Realizar un programa que genere 100 numeros al azar y los ordene decendentemente -->
+    <script>
+        var numeros=[];
+
+        for (var i = 0; i < 100; i++) {
+        var num_azar = Math.floor(Math.random() * 20) + 1;
+        numeros.push(num_azar);
+        }
+
+        var aux;
+        for(var j = 1; j<numeros.length; j++){
+            for(var i=0; i<(numeros.length-1); i++){
+                if (numeros[i] > numeros[i + 1]){
+                aux = numeros[i];
+
+                numeros[i] = numeros[i+1];
+
+                numeros[i+1] = aux;
+                }
+            }
+        }
+
+        for(var i=numeros.length-1;i>=0;i--){
+            document.write(numeros[i] + " ");
+        }
+        document.write(numeros.length)
+        
+    </script>
+</body>
+</html>

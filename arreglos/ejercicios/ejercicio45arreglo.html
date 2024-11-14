@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 45</title>
+</head>
+<body>
+    <!-- 45.	Calcular la suma de todos los elementos de un arreglo. -->
+    <script>
+        var numeros = [];
+
+        var tam=parseInt(prompt("Ingrese el tamaño del arreglo: "))
+        for(var i=0;i<tam;i++){
+            var num=parseInt(prompt("Ingrese el número "+i+": "))
+            numeros.push(num) 
+        }
+
+        var suma = 0;
+        for (var i = 0; i < numeros.length; i++) {
+            suma += numeros[i];
+        }
+        document.write("Números ingresados:"+numeros);
+        document.write("<br>La suma es: " + suma + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 16</title>
+</head>
+<body>
+    <!-- 16.Realice un programa que tome 10 numeros y los ordene acendentemente -->
+    <script>
+        var numeros =[];
+        var i, j, aux;
+ 
+        var tam=parseInt(prompt("Ingrese la cantidad de elementos: "));
+        for(i=0; i<tam; i++){
+            var val=parseFloat(prompt("Ingrese el valor "+i+": "));
+            numeros.push(val); //Registramos los valores que se ingresen.
+        }
+        document.write("Números ingresados:"+"<br>"+numeros)
+        
+        for (i = 0; i < tam - 1; i++) {
+            for (j = 0; j < tam - 1 - i; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    aux = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = aux;
+                }
+            }
+        }
+        document.write("<br>Números ordenados:"+"<br>"+numeros)
+    </script>
+</body>
+</html>

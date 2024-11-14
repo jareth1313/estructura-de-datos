@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 14.El banco “Bandido de peluche” desea calcular para cada uno de sus N clientes su saldo 
+actual, su pago mínimo y su pago para no generar interese  -->
+<body>
+    <script>
+        var i=1;
+        var cli = parseInt(prompt("Ingrese la cantidad de clientes:")); 
+        
+        do{
+            saldo_act = parseFloat(prompt("Ingrese el saldo actual del cliente "+ i+": ")); 
+
+            var pagomini = saldo_act * 0.15; 
+            var pago_inte = saldo_act; 
+
+            document.write("<br>Saldo actual del cliente "+i+ ": $"+saldo_act+ 
+                "<br>Pago para no generar intereses: $"+pago_inte+
+                "<br>Pago Mínimo: $"+pagomini+"<br>");
+                i++
+        }
+        while(i<=cli)
+        
+    </script>
+</body>
+</html>

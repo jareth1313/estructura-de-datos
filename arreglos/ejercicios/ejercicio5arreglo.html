@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 5</title>
+</head>
+<body>
+    <!-- 5.Programa que lea el nombre y el sueldo de 20 empleados y muestre el nombre y el sueldo del empleado que más gana. 
+    Si hay mas de un empleado que mostrar en el resultado, debe mostrar todos los que más ganan. -->
+    <script>
+        var nombres=[];
+        var sueldos=[];
+        var i=0;
+    
+        while(i<5){
+            var nom=prompt("Ingrese el nombre del empleado "+i+": ");
+            nombres.push(nom);
+            var ganancia=parseInt(prompt("Ingrese el sueldo del empleado "+i+": "));
+            sueldos.push(ganancia);
+            i++
+        }
+        
+        var max=sueldos[0]; //El cero es la posición de partida a iniciar.
+        var pos=0;
+
+        var mismo_sueldo=[];
+
+        for(i = 0; i < sueldos.length; i++) {
+            if(sueldos[i] > max) {
+                max = sueldos[i]
+                pos = i
+            }
+        }
+
+        for(var j=0;j<sueldos.length;j++){
+            if(sueldos[j]==max){
+                mismo_sueldo.push(nombres[j]);
+                }
+        }
+
+        document.write("Nombre del empleado: "+mismo_sueldo+" ");
+        document.write("<br>Sueldo mayor: "+sueldos[pos]);
+    </script>
+</body>
+</html>

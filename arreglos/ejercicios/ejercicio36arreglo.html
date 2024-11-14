@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 36</title>
+</head>
+<body>
+<!-- 36.Almacene en un arreglo de tamaño 10 números reales. Calcule el promedio e indique cuántos elementos del arreglo
+son mayores que el promedio y genere otro arreglo con los menores o iguales. -->
+    <script>
+        var numeros = [];
+        var suma = 0;
+        var menores_iguales = [];
+        var mayores_promedio = 0;
+
+        for (var i = 0; i < 10; i++) {
+            var num = parseInt(prompt("Ingrese el número "+i+": "));
+            numeros.push(num);
+            suma += num;
+        }
+
+        var promedio = suma / numeros.length;
+        for (var i = 0; i < numeros.length; i++) {
+            if (numeros[i] > promedio) {
+                mayores_promedio++;
+            } else {
+                menores_iguales.push(numeros[i]);
+            }
+        }
+       
+        document.write("Números ingresados:<br> " + numeros + "<br>");
+        document.write("Promedio: "+promedio.toFixed(2)+"<br>");
+        document.write("Cantidad de números mayores al promedio: "+mayores_promedio+"<br>");
+        document.write("Números menores o iguales al promedio: " +menores_iguales);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 31</title>
+</head>
+<body>
+<!-- 31.Inicialice un arreglo con 10 valores.
+Genere un arreglo a con los números negativos y otro arreglo b con los positivos o iguales a cero. -->
+    <script>
+    var numeros = [];
+    var negativos = [];
+    var positivos = [];  
+    
+    for (var i = 0; i < 10; i++) {
+        var num = parseFloat(prompt("Ingrese el número "+i+ ": "));
+        numeros.push(num);
+        
+        if (num < 0) {
+            negativos.push(num);
+        } else {
+            positivos.push(num);
+        }
+    }
+
+    document.write("Arreglo original: " + numeros + "<br>");
+
+    document.write("Arreglo de números negativos: " + negativos + "<br>");
+
+    document.write("Arreglo de números positivos o iguales a cero: " + positivos + "<br>");
+    </script>
+</body>
+</html>

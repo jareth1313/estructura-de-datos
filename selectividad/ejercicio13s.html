@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 select</title>
+</head>
+<body>
+    <!-- 13.Diseñe un programa para determinar a qué lugar podrá́ ir de vacaciones una persona, 
+    considerando que la línea de autobuses “La tortuga” cobra por kilómetro recorrido. 
+    Se debe considerar el costo del pasaje tanto de ida, como de vuelta; 
+    los datos que se conocen y que son fijos son: México, 750 km; P.V., 800 km; Acapulco, 
+    1200 km, y Cancún, 1800 km. 
+    También se debe considerar la posibilidad de tener que quedarse en casa. -->
+    <script>
+        var precio_km = 4;
+        var presupuesto = parseFloat(prompt("Ingresa tu presupuesto en pesos:"));
+
+        var mexico = 750;
+        var puerto_v = 800;
+        var acapulco = 1200;
+        var cancun = 1800;
+
+        var costoMexico = mexico * 2 * precio_km;
+        var costoPV = puerto_v * 2 * precio_km;
+        var costoAcapulco = acapulco * 2 * precio_km;
+        var costoCancun = cancun * 2 * precio_km;
+
+        if (presupuesto >= costoCancun) {
+            alert("Puede ir a Cancún de vacaciones. \n Costo total: " + costoCancun);
+        } else if (presupuesto >= costoAcapulco) {
+            alert("Puede ir a Acapulco de vacaciones. \n Costo total: " + costoAcapulco);
+        } else if (presupuesto >= costoPV) {
+            alert("Puede ir a Puerto Vallarta de vacaciones. \n Costo total: " + costoPV);
+        } else if (presupuesto >= costoMexico) {
+            alert("Puede ir a México de vacaciones. \n Costo total: " + costoMexico);
+        } else {
+            alert("Presupuesto insuficiente. Deberás quedarte en casa.");
+        }
+
+    </script>
+</body>
+</html>

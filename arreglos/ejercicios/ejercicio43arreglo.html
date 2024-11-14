@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 43</title>
+</head>
+<body>
+<!-- 43.Almacene 2 arreglos a y b de longitudes n y m, el primero ordenado en forma ascendente y el segundo ordenado de 
+manera descendente, crear un nuevo arreglo c de n + m elementos intercalando los elementos de a y b de modo que c 
+quede ordenado en forma ascendente. -->
+    <script>
+        var n = parseInt(prompt("Ingrese la longitud del arreglo a: "));
+        var m = parseInt(prompt("Ingrese la longitud del arreglo b: "));
+
+        var a = [];
+        for (var i = 0; i < n; i++) {
+            var num = parseInt(prompt("Ingrese el número "+i+" para el arreglo a (ascendente): "));
+            a.push(num);
+        }
+
+        var b = [];
+        for (var j = 0; j < m; j++) {
+            var num = parseInt(prompt("Ingrese el número "+j+" para el arreglo b (descendente): "));
+            b.push(num);
+        }
+
+        var c = [];
+        var i = 0; 
+        var j = 0;
+
+        while (i < n && j < m) {
+            if (a[i] <= b[j]) {
+                c.push(a[i]);
+                i++;
+            } else {
+                c.push(b[j]);
+                j++;
+            }
+        }
+
+        while (i < n) {
+            c.push(a[i]);
+            i++;
+        }
+        while (j < m) {
+            c.push(b[j]);
+            j++;
+        }
+        document.write("Arreglo a (ascendente): " + a + "<br>");
+        document.write("Arreglo b (descendente): " + b + "<br>");
+        document.write("Arreglo c (combinado y ordenado ascendentemente): " + c + "<br>");
+    </script>
+</body>
+</html>

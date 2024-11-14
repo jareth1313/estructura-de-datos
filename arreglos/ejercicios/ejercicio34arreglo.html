@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 34</title>
+</head>
+<body>
+<!-- 34.Almacene en un arreglo 10 números y cambie algún número por otro del mismo arreglo,
+     realice el cambio y muestre el arreglo modificado. -->
+    <script>
+        var numeros = [];
+
+        for (var i = 0; i < 10; i++) {
+            numeros.push(parseInt(prompt("Ingrese el número "+i+": ")));
+        }
+        document.write("Números Ingresados <br>" + numeros + "<br>");
+
+        var cambiar_num= parseInt(prompt("Ingrese el índice (de 0 a 9) del número que desea cambiar: "))
+        var new_num = parseInt(prompt("Ingrese el índice (de 0 a 9) del número que desea usar para el cambio: "));
+
+        var indice = numeros[cambiar_num];
+        numeros[cambiar_num] = numeros[new_num];
+        numeros[new_num] = indice;
+
+        document.write("Números cambiados: <br>" + numeros);
+    </script>
+</body>
+</html>

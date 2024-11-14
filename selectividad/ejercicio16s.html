@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 select</title>
+</head>
+<body>
+    <!--16.Los alumnos de una escuela desean realizar un viaje de estudios, pero requieren determinar cuánto les 
+    costará el pasaje, considerando que las tarifas del autobús son las siguientes: si son más de 100 alumnos, 
+    el costo es de $20; si son entre 50 y 100, $35; entre 20 y 49, $40, y si son menos de 20 alumnos, 
+    $70 por cada uno. Realice el programa para determinar el costo del pasaje de cada alumno.  -->
+    <script>
+        var t_alumnos=parseInt(prompt("Ingrese el total de alumnos: "));
+        var costo_alumno=0;
+        var costo_bus=0;
+
+        if(t_alumnos>100){
+            costo_bus=t_alumnos*20;
+            costo_alumno=20;
+            alert("Total de alumnos: "+t_alumnos+
+                "\nCosto del pasaje: $"+costo_alumno+
+                "\nCosto del bus: $"+costo_bus);
+        }else if(t_alumnos>=50 && t_alumnos<=100){
+            costo_bus=t_alumnos*35;
+            costo_alumno=35;
+            alert("Total de alumnos: "+t_alumnos+
+                "\nCosto del pasaje: $"+costo_alumno+
+                "\nCosto del bus: $"+costo_bus);
+        }else if(t_alumnos>=20 && t_alumnos<50){
+            costo_bus=t_alumnos*40;
+            costo_alumno=40;
+            alert("Total de alumnos: "+t_alumnos+
+                "\nCosto del pasaje: $"+costo_alumno+
+                "\nCosto del bus: $"+costo_bus);
+        }else if(t_alumnos<20){
+            costo_bus=t_alumnos*70;
+            costo_alumno=70;
+            alert("Total de alumnos: "+t_alumnos+
+                "\nCosto del pasaje: $"+costo_alumno+
+                "\nCosto del bus: $"+costo_bus);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 25</title>
+</head>
+<body>
+<!-- 25. Supongamos que en una elección hubo 12 candidatos (con identificadores 1,2,3, …, 12). 
+Por otra parte, los votos para cada candidato se teclean de manera desorganizada como se muestra a continuación:
+1  5  7  5  1  12  10  7  1  7  5  8  1  5 -1.
+(número negativo para detener la captura de votos)
+ Construya un programa que pueda proporcionar la siguiente información:
+a.	El número de votos de cada candidato al final de la elección.
+b.	El candidato ganador, el número de votos que obtuvo y el porcentaje correspondiente del total de la elección.
+Suponemos que el candidato ganador no empató en número de votos con otro candidato. -->
+    <script>
+        var i=0;
+        var votos=[];
+        while(true){
+
+            var num = parseInt(prompt("Ingrese el número del candidato seleccionado: (1-12)"));
+            if(num>12||num==0){
+                alert("candidato inexistente");
+            }else if(num<0){
+                break;
+            }else{
+                votos.push(num);
+            }
+        }
+        var conteoVotos =[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];      
+        for(var i = 0; i < votos.length; i++) {
+            conteoVotos[votos[i] - 1]++;
+        }
+
+        document.write("Resultados:<br>");
+        var totalVotos = votos.length;
+        for(var i = 0; i < conteoVotos.length; i++) {
+            document.write("Candidato "+i+": " + conteoVotos[i] + " votos<br>");
+        }
+
+        var maxVotos = Math.max(conteoVotos);
+        var ganador = conteoVotos.indexOf(maxVotos) + 1;
+        var porcentajeGanador = (maxVotos / totalVotos) * 100;
+
+        document.write("Candidato ganador:<br>");
+        document.write("El candidato " + ganador + " ganó con " + maxVotos + " votos (" + porcentajeGanador.toFixed(2) + "% del total).");
+    </script>
+</body>
+</html>

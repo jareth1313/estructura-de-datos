@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 13</title>
+</head>
+<body>
+    <!-- 13.Desarrollar un programa que lea 10 números por teclado los almacenen en un arreglo 
+    y muestre la suma resta multiplicación y división de todos. -->
+    <script>
+        var numeros = [];
+        var suma=0;
+        var mul=1;
+
+        var tam=parseInt(prompt("Ingrese la cantidad de elementos: "));
+        for(var i=0; i<tam; i++){
+            var val=parseFloat(prompt("Ingrese el valor "+i+": "));
+            numeros.push(val); //Registramos los valores que se ingresen.
+            suma+=numeros[i]; 
+        }
+        document.write("Datos ingresados: "+numeros+" ")
+
+        document.write("<br>Suma = "+suma)
+
+        for(var i=0; i<tam; i++){
+            mul=mul*numeros[i]; //Tambien se puede así-> mul*=numeros[i]
+        }
+        document.write("<br>Multiplicación = "+mul)
+
+        var resta=numeros[0];
+        for(var i=1; i<tam; i++){
+            resta=resta-numeros[i]; //Tambien se puede así-> resta-=numeros[i]
+        }
+        document.write("<br>Resta = "+resta)
+
+        var division=numeros[0];
+        for(var i=1; i<tam; i++){
+            division=division/numeros[i];   //Tambien se puede así-> división/=numeros[i]   
+        }
+        document.write("<br>División = "+division)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 4.Una persona se encuentra en el kilómetro 70 de la carretera Aguascalientes- Zacatecas,
+ otra se encuentra en el km 150 de la misma carretera, la primera viaja en dirección a Zacatecas,
+ mientras que la segunda se dirige a Aguascalientes, a la misma velocidad.
+ Realice un programa para determinar en qué kilómetro de esa carretera se encontrarán,
+ utilizando el ciclo apropiado. -->
+<body>
+    <script>
+        var i=1
+        var km1=70;
+        var km2=150;
+
+        do{
+            km1++, km2--
+            if(km1==km2){
+                alert("Se encontrarán en el kilómetro "+km1);
+            }
+            i++
+        }
+        while(i<=80)
+    </script>
+</body>
+</html>

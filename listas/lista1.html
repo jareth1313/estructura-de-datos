@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+</head>
+<body>
+    <script>
+        //Lista estatica
+        var alumnos= [
+            {nombre: "Mariana", edad: 20, carrera: "Agricultura"},
+            {nombre: "Pedro", edad: 19, carrera: "TI"},
+            {nombre: "Eduardo", edad: 25, carrera: "Turismo"},
+            {nombre: "Marco", edad: 18, carrera: "Contabilidad"},
+            {nombre: "Karla", edad: 21, carrera: "TI"},
+            {nombre: "Martha", edad: 19, carrera: "Alimentos"},
+            {nombre: "Brayan", edad: 22, carrera: "Mantenimineto"}
+        ];
+
+        //El json imprime la lista, convirtiendola a una cadena de carácteres.
+        document.write("alumnos"+JSON.stringify(alumnos)+"<br><br>")
+
+        var nombres=alumnos.map(alumnos=>alumnos.nombre)
+        document.write("Nombres"+JSON.stringify(nombres)+"<br><br>")
+
+         var orden=alumnos.sort((a,b)=>b.edad-a.edad);
+        document.write("Orden"+JSON.stringify(orden)+"<br><br>")
+
+                                //estudiante es un alias, primero se pone un alias
+        var mayor20=alumnos.filter(estudiante=>estudiante.edad>20)
+        document.write("Mayores a 20"+JSON.stringify(mayor20)+"<br><br>")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 44</title>
+</head>
+<body>
+    <script>
+        var lado_izquierdo = [];
+        for (var i = 1; i <= 9; i++) {
+            var numeros = "";
+            
+            for (var j = 1; j <= i; j++) {
+                numeros += j;
+            } 
+            var resultado = numeros * 9 + (i + 1);
+            lado_izquierdo.push(numeros + " × 9 + " + (i + 1) + " = " + resultado);
+        }
+
+        for (var i = 0; i < lado_izquierdo.length; i++) {
+            document.write(lado_izquierdo[i] + "<br>");
+        }
+        document.write("<br>")
+
+        piramide2 = []
+        base = 1
+        for(i=0;i<9;i++,base=base*10+1){
+            piramide2.push(base+" × "+base+"="+(base*base)+"<br>")
+        }
+        for(var i=0;i<piramide2.length;i++){
+            document.write(piramide2[i])
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 23</title>
+</head>
+<body>
+<!--23.Escriba un programa que efectúe las siguientes operaciones:
+A)Venta de un producto: se deben actualizar los campos que correspondan y verificar que
+la nueva existencia no esté por debajo del mínimo. (Datos: clave, cantidad vendida).
+
+B)Reabastecimiento de un producto: se deben actualizar los campos que correspondan. 
+(Datos: clave, cantidad comprada.).
+
+C)Actualizar el precio de un producto. (Datos: clave, porcentaje de aumento.),
+
+D)Informar sobre un productor: se deben proporcionar todos los datos relacionados 
+con un producto. (Dato: clave). -->
+    <script>
+        var producto=[];
+        var clave=[];
+        var cant_prod=[];
+        var precio=[];
+
+        var cantidad=parseInt(prompt("Ingrese la cantidad de productos: "));
+
+        for(var i=0;i<cantidad;i++){
+            var nom=prompt("Ingrese el nombre del producto: "+i);
+            producto.push(nom);
+            var id=prompt("Ingrese la clave del producto: "+nom);
+            clave.push(id);
+            cant_prod.push(parseInt(prompt("Ingrese la cantidad del producto: "+nom)));
+            precio.push(parseFloat(prompt("Ingrese el precio del producto " + nom + ": ")));
+        }
+        var clave_venta = parseInt(prompt("Ingrese la clave del producto que desea vender: "));
+        var cantidad_venta = parseInt(prompt("Ingrese la cantidad vendida del producto: "));
+
+        for (var i = 0; i < clave.length; i++) {
+            if (clave[i] == clave_venta) {
+                if (cant_prod[i] >= cantidad_venta) {
+                    cant_prod[i] -= cantidad_venta;
+                    document.write("Producto vendido: " + producto[i] + "<br>");
+                    document.write("Cantidad restante: " + cant_prod[i] + "<br>");
+                    if (cant_prod[i] < 5) {
+                        document.write("El stock por debajo del mínimo.<br>");
+                    }
+                } else {
+                    document.write("No hay suficiente stock para la venta.<br>");
+                }
+            }
+        }
+        var clave_reabastecer = parseInt(prompt("Ingrese la clave del producto que desea reabastecer: "));
+        var cantidad_reabastecer = parseInt(prompt("Ingrese la cantidad comprada del producto: "));
+
+        for (var i = 0; i < clave.length; i++) {
+            if (clave[i] == clave_reabastecer) {
+                cant_prod[i] += cantidad_reabastecer;
+                document.write("Producto reabastecido: " + producto[i] + "<br>");
+                document.write("Cantidad actual: " + cant_prod[i] + "<br>");
+            }
+        }
+
+        var clave_precio = parseInt(prompt("Ingrese la clave del producto para actualizar el precio: "));
+        var porcentaje_aumento = parseFloat(prompt("Ingrese el porcentaje de aumento de precio: "));
+
+        for (var i = 0; i < clave.length; i++) {
+            if (clave[i] == clave_precio) {
+                precio[i] += precio[i] * (porcentaje_aumento / 100);
+                document.write("Nuevo precio del producto " + producto[i] + ": " + precio[i] + "<br>");
+            }
+        }
+
+        var clave_info = parseInt(prompt("Ingrese la clave del producto para obtener información: "));
+        for (var i = 0; i < clave.length; i++) {
+            if (clave[i] == clave_info) {
+                document.write("<br>Información del producto:<br>");
+                document.write("Nombre: " + producto[i] + "<br>");
+                document.write("Clave: " + clave[i] + "<br>");
+                document.write("Cantidad en stock: " + cant_prod[i] + "<br>");
+                document.write("Precio: " + precio[i] + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
