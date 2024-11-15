@@ -44,11 +44,12 @@ nav ul li a:hover {
 /* Contenedor de tarjetas */
 .container {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    max-width: 1000px;
+    max-width: 100%; /* Permitir que el contenedor ocupe todo el ancho */
     padding: 20px;
-    margin-top: 20px; /* Espacio entre el nav y las tarjetas */
+    margin-top: 20px;
+    overflow-x: auto; /* Agregar desplazamiento horizontal si no caben */
+    justify-content: space-between; /* Espaciar las tarjetas uniformemente */
 }
 
 .card {
@@ -57,13 +58,14 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
-    width: 100%;
-    max-width: 300px;
+    width: calc(25% - 20px); /* Asegurar que cuatro tarjetas quepan en la fila */
+    min-width: 250px; /* Ancho mínimo para que las tarjetas se vean bien */
 }
 
 .card:hover {
     transform: translateY(-10px);
 }
+
 
 .card img {
     width: 100%;
