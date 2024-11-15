@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+    <!-- 1.Dada la matricula y 5 calificaciones de un alumno obtenidas a lo largo del cuatrimestre, 
+    construya un programa
+     que imprima la matrícula del alumno y el promedio de sus calificaciones. -->
+    <script>
+    var mat=prompt("Ingrese la matrícula: ");
+
+    var cal1=parseFloat(prompt("Ingrese la calificación 1: "));
+    var cal2=parseFloat(prompt("Ingrese la calificación 2: "));
+    var cal3=parseFloat(prompt("Ingrese la calificación 3: "));
+    var cal4=parseFloat(prompt("Ingrese la calificación 4: "));
+    var cal5=parseFloat(prompt("Ingrese la calificación 5: "));
+    
+    var prom=(cal1+cal2+cal3+cal4+cal5)/5;
+
+    alert("Matrícula: "+ mat+"\n"+
+        "Promedio: "+ prom
+    )
+    </script>
+
+</body>
+</html>

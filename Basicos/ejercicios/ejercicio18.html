@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+<body>
+    <script>
+        var pi=3.141592;
+        
+        var radio=parseFloat(prompt("Ingrese el radio: "));
+        
+        var gen=parseFloat(prompt("Ingrese la generatriz: "));
+        
+        var altura=parseFloat(prompt("Ingrese la altura: "));
+        
+        var AB=pi*(radio*radio);
+        
+        var AL= pi*radio*gen;
+        
+        var AT= AB+AL;
+        
+        var VOL= AB*altura*1/3;
+        
+        document.write("EL volumen es: "+VOL+"<br>");
+        document.write("EL area de la base es: "+AB+"<br>");
+        document.write("EL area lateral es: "+AL+"<br>");
+        document.write("El area total es: "+AT);
+    </script>
+    
+</body>
+</html>

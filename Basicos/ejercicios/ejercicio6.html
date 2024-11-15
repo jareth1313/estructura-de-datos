@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <!-- 6.Escriba un programa tal que, dado como datos el nombre de un dinosaurio, 
+    su peso y longitud, expresados estos dos últimos en libras y pies respectivamente;
+    escriba el nombre del dinosaurio, 
+    su peso expresado en kilogramos y su longitud expresada en metros. -->
+    <script>
+        var nom_dino=prompt("Ingrese el nombre del dinosaurio: ");
+        
+        var peso_libra=parseFloat(prompt("Ingrese el peso en libras: "));
+        
+        var longi_pies=parseFloat(prompt("Ingrese la longitud en pies: "));
+        
+        var peso_kilos=peso_libra/2.205;
+        var longi_metros=longi_pies/3.281;
+        
+        document.write("Nombre del dinosaurio: "+nom_dino+"<br>");
+        document.write("Peso en kilos: "+peso_kilos);
+        document.write("<br> Longitud en metros: "+longi_metros);
+    </script>
+</body>
+</html>
