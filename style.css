@@ -37,14 +37,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ccc;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #ccc;
-    
+    color:  #3d9649;
 }
 
 /* Contenedor de tarjetas */
@@ -59,7 +58,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #28ac07;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -83,10 +82,19 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.content a{
+    text-decoration: none;
+    color: white;
+}
+
 h2 {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 10px;
+}
+
+h1{
+    color: #fff;
 }
 
 p {
@@ -148,8 +156,13 @@ p {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background-color: #d6b3ff;
+    background-color: #e0c5a0;
     color: black;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }  
+
+  .data-table a{
+    text-decoration: none;
+    color: rgb(38, 25, 221);
+  }
