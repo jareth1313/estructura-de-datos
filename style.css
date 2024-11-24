@@ -17,7 +17,7 @@ body {
 /* Navbar */
 nav {
     width: 100%;
-    background-color: #E63946;
+    background-color: #007D6C;
     padding: 20px 0;
 }
 
@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:  #1a1b1c;
+    color:  #000000;
 }
 
 /* Contenedor de tarjetas */
@@ -91,7 +91,7 @@ nav ul li a:hover {
 .volver {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Color base sólido (verde) */
+    background-color: #5EB1BF; /* Color base sólido (verde) */
     color: white; /* Texto blanco */
     text-decoration: none; /* Sin subrayado */
     font-size: 16px; /* Tamaño de fuente */
@@ -104,7 +104,7 @@ nav ul li a:hover {
 }
 
 .volver:hover {
-    background-color: #4c4747; /* Color azul claro al pasar el mouse */
+    background-color: #1cdf23; /* Color azul claro al pasar el mouse */
     color: white; /* Mantener el texto blanco */
 }
 /* Contenedor del botón */
@@ -181,7 +181,7 @@ p {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background-color: #5EB1BF;
+    background-color: #007D6C;
     color: black;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -189,13 +189,13 @@ p {
 
   .data-table a{
     text-decoration: none;
-    color: rgb(9, 9, 9);
+    color: #F1FAEE;
   }
 
   /* Footer */
 footer {
     width: 100%;
-    background-color: #E63946; /* Color de fondo del footer */
+    background-color: #007D6C; /* Color de fondo del footer */
     text-align: center;
     padding: 20px 0; /* Espaciado interno */
     position: relative; /* Permite que el footer se quede al final del contenido */
