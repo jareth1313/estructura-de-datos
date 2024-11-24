@@ -1,36 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repetición</title>
+  <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <audio autoplay loop style="display:none;">
-        <source src="../otra.mp3" type="audio/mpeg">
-    </audio>
-    
-    <script>
-        var tam=parseInt(prompt("Ingrese el tamaño de la pila: "));
-        var pila = [];
-        
-        for(var i=0; i<tam; i++){
-        var dato=prompt("Ingrese el dato: "+i);
+  <nav>
+    <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="">Portafolio De Java</a></li>
+        <li><a href="ARREGLOS - C++.PDF">Portafolio De C++</a></li>
+    </ul>
+  </nav>
+  <h1>Ciclos Do While</h1>
 
-        pila.push(dato);
-        }
-        document.write("Pila después de apilar: "+ pila); 
-
-        document.write("<br>Último elemento de la pila: "+ pila[pila.length-1]);
-
-        document.write("<br>Elemento eliminado: "+ pila.pop());
-
-        document.write("<br>Pila después de desapilar: "+ pila); 
-
-        document.write("<br>¿Pila vacía?: ", pila.length === 0);
-
-        document.write("<br>Tamaño de la pila: "+ pila.length);
-
-    </script>
+<div class="table-container">
+    <table class="data-table">
+      <tr><td><a href="pila1.html">Ejercicio 1</a></td></tr>
+    </table>
+  </div>
 </body>
 </html>
