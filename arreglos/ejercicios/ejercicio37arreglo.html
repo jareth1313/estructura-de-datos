@@ -24,6 +24,13 @@
         }
         document.write("Números ingresados: " + numeros + "<br>");
         document.write("Cantidad de números que terminan en dígito primo: " + num_primos + "<br>");
+
+            // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+          
     </script>
 </body>
 </html>

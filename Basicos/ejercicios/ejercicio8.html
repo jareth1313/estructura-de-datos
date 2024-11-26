@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Construya un programa tal que dado como datos el radio y la altura de un cilindro, calcule e imprima el área y su volumen.")
+    
         var altura=parseFloat(prompt("Ingrese la altura: "));
         
         var radio=parseFloat(prompt("Ingrese el radio: "));
@@ -19,6 +21,12 @@
         
         alert("El volumen es: "+ volumen + "\n" + 
         "El área es: "+ area);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

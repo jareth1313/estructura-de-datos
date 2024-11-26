@@ -52,6 +52,13 @@ d.	La mayor temperatura y el número de día en que ocurrió. -->
 
         document.write("<br>La menor temperatura fue de " + temp_min + " grados Celsius el " + diasSemana[diaMin] + ".<br>");
         document.write("La mayor temperatura fue de " + temp_max + " grados Celsius el " + diasSemana[diaMax] + ".<br>");
+
+            // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+          
     </script>
 </body>
 </html>

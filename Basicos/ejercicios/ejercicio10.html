@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+         alert("Construya un programa tal que dados los tres lados de un triángulo, pueda determinar su área.")
+    
         var la1= parseFloat(prompt("Ingrese el lado 1: "));
         
         var la2= parseFloat(prompt("Ingrese el lado 2: "));
@@ -20,6 +22,12 @@
         var area=Math.sqrt(preA);
         
         alert("Area: "+area);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -33,6 +33,13 @@ son mayores que el promedio y genere otro arreglo con los menores o iguales. -->
         document.write("Promedio: "+promedio.toFixed(2)+"<br>");
         document.write("Cantidad de números mayores al promedio: "+mayores_promedio+"<br>");
         document.write("Números menores o iguales al promedio: " +menores_iguales);
+
+            // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+          
     </script>
 </body>
 </html>

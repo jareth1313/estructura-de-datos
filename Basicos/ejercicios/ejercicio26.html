@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Dada una cantidad de milímetros, expresarlo en la máxima cantidad de metros, el resto en decímetros, centímetros y milímetros.")
+    
         var mili=parseInt(prompt("Ingrese los milimetros: "));
         
         var metro=mili/1000;
@@ -22,6 +24,12 @@
         document.write("Decimetro: " + decime+"<br>");
        
         document.write("Milimetros: " + mili);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Escriba un programa que calcule el número mínimo de billetes de 20, 10, 5 y 1 dólares que se necesita para cambiar un cheque. Considere que el valor del cheque es un número entero.")
+    
         var cheque=parseInt(prompt("Ingrese la cantidad del cheque: "));
 
         var dolar20 = cheque / 20;
@@ -24,6 +26,12 @@
         var dolar1 = cheque;
 
         document.write("Billetes de $1: " + dolar51);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

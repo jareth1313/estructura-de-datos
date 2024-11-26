@@ -45,6 +45,13 @@ Suponemos que el candidato ganador no empató en número de votos con otro candi
 
         document.write("Candidato ganador:<br>");
         document.write("El candidato " + ganador + " ganó con " + maxVotos + " votos (" + porcentajeGanador.toFixed(2) + "% del total).");
+
+            // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+          
     </script>
 </body>
 </html>

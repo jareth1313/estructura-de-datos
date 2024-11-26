@@ -7,11 +7,19 @@
 </head>
 <body>
     <script>
+        alert("Ingrese una cantidad en metros y convertir a kilómetros, sabiendo que 1km = 1000 m")
+    
         var metros=parseFloat(prompt("Ingrese los metros a convertir: "));
         
         var kl=metros/1000;
         
         alert(metros+" metro/s son: "+kl+" kilometro/s");
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

@@ -7,11 +7,19 @@
 </head>
 <body>
     <script>
+         alert(".Hallar la raiz cubica de n número, donde n pertenece a Z (números enteros positivos).")
+    
         var num=parseFloat(prompt("Ingrese un número entero positivo: "));
         
         var cubo=Math.pow(num, 3);
         
         alert("La raiz cubica de "+num+" es: "+cubo);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

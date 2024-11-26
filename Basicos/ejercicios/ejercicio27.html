@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Obtener el valor de C y D.")
+    
         var a=parseInt(prompt("Ingrese el valor de a"));
         
        var b=parseInt(prompt("Ingrese el valor de b"));
@@ -17,6 +19,12 @@
         
         alert("Valor de C: "+c
         + "\n Valor de D: "+d);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

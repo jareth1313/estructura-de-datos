@@ -12,6 +12,8 @@
     escriba el nombre del dinosaurio, 
     su peso expresado en kilogramos y su longitud expresada en metros. -->
     <script>
+        alert("Escriba un programa tal que, dado como datos el nombre de un dinosaurio, su peso y longitud, expresados estos dos últimos en libras y pies respectivamente; escriba el nombre del dinosaurio, su peso expresado en kilogramos y su longitud expresada en metros. ")
+    
         var nom_dino=prompt("Ingrese el nombre del dinosaurio: ");
         
         var peso_libra=parseFloat(prompt("Ingrese el peso en libras: "));
@@ -24,6 +26,12 @@
         document.write("Nombre del dinosaurio: "+nom_dino+"<br>");
         document.write("Peso en kilos: "+peso_kilos);
         document.write("<br> Longitud en metros: "+longi_metros);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

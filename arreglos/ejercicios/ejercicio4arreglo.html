@@ -29,6 +29,13 @@
         for(var i=numeros.length-1; i>=0; i--){
             document.write(numeros[i]+" ");
         }
+
+            // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+          
     </script>
 </body>
 </html>

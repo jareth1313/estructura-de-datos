@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
     <title>Arreglo 1</title>
+    
 </head>
 <body>
-    <!-- 1.Diseña un programa con un arreglo de 20 elementos llamado pares y guarda los 20 primeros números pares en dicho
-    arreglo, muestra en pantalla el contenido del arreglo. -->
     <script>
+        alert('Diseña un programa con un arreglo de 20 elementos llamado pares y guarda los 20 primeros números pares en dicho arreglo, muestra en pantalla el contenido del arreglo.')
         var pares=[];
         for(var i=0;i<20;i++){
             pares[i]=parseInt(prompt("Ingrese el número "+i+" :"));
@@ -16,6 +17,12 @@
             document.write("Número par "+ i+": "+pares[i]+"<br>");
             }
         }
+    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+            
     </script>
 </body>
 </html>

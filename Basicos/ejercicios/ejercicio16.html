@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+         alert("Una empresa compró una estancia en un país sudamericano. La extensión de la estancia está especificada en acres. Construya un programa, tal que dado como datos la extensión del campo en “acres”, calcule e imprima la extensión del mismo en hectáreas.")
+    
         var acres=parseFloat(prompt("Ingrese la extensión en acres: "));
 
         var acres=acres*4047; 
@@ -14,6 +16,12 @@
         var hectareas=acres/10000;
         
         alert("Hectáreas: "+hectareas);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

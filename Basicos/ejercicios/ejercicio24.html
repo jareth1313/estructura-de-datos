@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Calcular el interés compuesto generado por un capital depositado durante cierta cantidad de tiempo a una tasa de interés determinada")
+    
         var capi=parseFloat(prompt("Ingrese la capital: "));
         
         var tiempo=parseFloat(prompt("Ingrese el tiempo en días: "));
@@ -18,6 +20,12 @@
         
         document.write("El monto es de: "+M+"<br>");
         document.write("El interes es de: "+i);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

@@ -10,6 +10,7 @@
     <!-- 2.Escriba un programa que permita calcular
      e imprimir el cuadrado y el cubo de un número entero positivo. -->
     <script>
+        alert("Escriba un programa que permita calcular e imprimir el cuadrado y el cubo de un número entero positivo. ")
          var x=prompt("Ingrese la potencia deseada: ");
         
         var base=prompt("Ingrese un número: ");
@@ -20,7 +21,12 @@
         
         alert("EL numero "+ base + " elevado a la "+ x +
                 " es igual a: "+potencia);
-        
+                
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -7,11 +7,19 @@
 </head>
 <body>
     <script>
+        alert("Ingresar un cantidad en Gramos y transformar a Libras, sabiendo que 1lb = 453.59g")
+    
         var gramo=parseFloat(prompt("Ingrese una cantidad en gramos: "));
         
         var libra=gramo/453.59;
         
        alert(gramo+" gramo/s es igual a: "+libra+" libra/s");
+
+        // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

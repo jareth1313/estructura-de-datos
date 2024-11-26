@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Convertir de metros a: Kilómetros, centímetros y decímetros, sabiendo que 1Km=10000dm y 1dm=10cm.")
+    
         var metros=parseFloat(prompt("Ingrese los metros a convertir: "));
         
         var kl=metros/1000;
@@ -18,6 +20,12 @@
         alert("Kilometros: "+kl+
                 "\n Centimetros: "+centi+
                 "\n Decimetros: "+deci);
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

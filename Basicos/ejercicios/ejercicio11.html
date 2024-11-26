@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Construya un programa que calcule la distancia entre dos puntos, dado como datos las coordenadas de los puntos P1 y P2.")
+    
         var x_ini=parseFloat(prompt("Ingrese la cordenda inicial en x: "));
         
         var y_ini=parseFloat(prompt("Ingrese la cordenada inicial en y: "));
@@ -28,6 +30,12 @@
          var resultado=Math.sqrt(sum);
          
          alert("El destino es: "+resultado);
+
+          // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Dado 4 números enteros, obtener el porcentaje de cada uno en función a la suma de los 4 número ingresados.")
+    
         var val1=parseInt(prompt("Ingrese el valor 1: ")); 
         var val2=parseInt(prompt("Ingrese el valor 2: ")); 
         var val3=parseInt(prompt("Ingrese el valor 3: ")); 
@@ -23,6 +25,12 @@
                 "\n El porcentaje de "+val2+" e: "+v2+
                 "\n El porcentaje de "+val3+" e: "+v3+
                 "\n El porcentaje de "+val4+" e: "+v4);
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

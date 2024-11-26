@@ -34,6 +34,13 @@ Al final imprimir las cuatro listas. -->
     document.write("Lista 1, de 0 a 50: " + lista1 + "<br><br>");
     document.write("Lista 2, de 51 a 100: " + lista2 + "<br><br>");
     document.write("Lista 3, mayores a 100: " + lista3 + "<br><br>");
+
+        // Redirigir al index.html después de 3 segundos
+        setTimeout(function() {
+            alert("Programa concluido");
+            window.location.href ="../arreglos.html";
+        }, 3000); // Tiempo en milisegundos (3000ms = 2s)
+          
     </script>
 </body>
 </html>

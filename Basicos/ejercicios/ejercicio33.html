@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Calcular la edad actual de una persona, previamente ingresado el año actual y el año de nacimiento.")
+    
         var año_act=parseInt(prompt("Ingrese el año actual: "));
         
         var fech_nac=parseInt(prompt("Ingrese su feha de nacimiento: "));
@@ -14,6 +16,12 @@
         var edad=año_act-fech_nac;
         
        alert("Su edad es de "+edad+" años");
+
+        // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

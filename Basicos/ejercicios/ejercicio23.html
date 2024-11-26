@@ -7,11 +7,19 @@
 </head>
 <body>
     <script>
+        alert(".Determinar la suma de los N primeros números enteros positivos.")
+    
         var num=parseInt(prompt("Ingrese una cantidad entera positiva: "));
         
         var s= (num*(num+1))/2;
         
         alert("La suma de los numeros anteriores a "+num+" es: "+s);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

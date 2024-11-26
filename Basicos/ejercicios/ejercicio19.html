@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+         alert("Construya un programa que dado el radio de una esfera, calcule e imprima el área y su volumen.")
+    
         var pi=3.141592;
         
        var radio=parseFloat(prompt("Ingrese el radio: "));
@@ -17,6 +19,12 @@
         
         document.write("El area es: "+area+"<br>");
         document.write("El volumen es: "+vol);
+
+         // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

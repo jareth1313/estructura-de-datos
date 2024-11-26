@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        alert("Convertir de pies a: Pulgadas, metros y yardas, sabiendo que 1m=39.37pulg, 1y=3pies, 1m=3.28pies")
+    
         var pies=parseFloat(prompt("Ingrese los pies a convertir:"));
         
         var pul=pies*12;
@@ -16,6 +18,12 @@
         alert("Pulgadas: "+pul+
                 "\n Metros: "+metro+
                 "\n Yarda: "+yarda);
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>

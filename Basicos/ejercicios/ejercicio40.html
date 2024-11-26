@@ -7,12 +7,20 @@
 </head>
 <body>
     <script>
+        alert("Ingresar un valor en Temperatura Celsius y convertir a Grados Fahrenheit, sabiendo que 1gc = 9/5gf")
+    
         var gc=parseFloat(prompt("Ingrese los grados Celsius: "));
         
         var gf=gc*1.8;
         
         alert("Grado/s Celsius: "+gc+
                 "\n Conversion grado Fahrenheit: "+gf);
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../Basicos.html";
+    }, 1000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
     
 </body>
