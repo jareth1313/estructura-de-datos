@@ -9,6 +9,8 @@
 actual, su pago mínimo y su pago para no generar interese  -->
 <body>
     <script>
+          alert('El banco “Bandido de peluche” desea calcular para cada uno de sus N clientes su saldo actual, su pago mínimo y su pago para no generar interese.')
+
         var cli = parseInt(prompt("Ingrese la cantidad de clientes:"));        
         for (var i=1;i<=cli;i++){
             saldo_act = parseFloat(prompt("Ingrese el saldo actual del cliente "+ i+": ")); 
@@ -20,6 +22,12 @@ actual, su pago mínimo y su pago para no generar interese  -->
                 "<br>Pago para no generar intereses: $"+pago_inte+
                 "<br>Pago Mínimo: $"+pagomini+"<br>");
         }
+
+              // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../for.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

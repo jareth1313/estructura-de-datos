@@ -12,6 +12,8 @@
     el precio final que debe pagar
     una persona por comprar un traje y de cuánto es el descuento que obtendrá. -->
     <script>
+        alert('Almacenes “El harapiento distinguido” tiene una promoción: a todos los trajes que tienen un precio superior a $2500.00 se les aplicará un descuento de 15%, a todos los demás se les aplicará solo 8%. ');
+
         var total=0;
         var precio=parseFloat(prompt("Ingrese el precio del traje: "));
 
@@ -26,6 +28,11 @@
             document.write("Costo del traje: "+precio+"<br>"+
             "Precio a pagar con descuento del 8%: "+total);
         }
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

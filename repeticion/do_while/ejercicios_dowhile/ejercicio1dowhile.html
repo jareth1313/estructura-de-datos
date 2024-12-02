@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        alert('Se requiere un algoritmo para obtener la edad promedio de un grupo de N alumnos')
         var i=1;
         var suma=0;
         var promedio=0;
@@ -22,6 +23,12 @@
         }
         while(i<=alumno)
         document.write("La edad promedio es: "+prom);
+
+        // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../dowhile.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -11,6 +11,8 @@ durante 6 años. ¿Cuál es su salario al cabo de 6 años?
 Realice el programa utilizando el ciclo apropiado. -->
 <body>
    <script>
+    alert('Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años?')
+        
     var i=1;
     var sal_base = 1500; 
     var incremento = 0.10; 
@@ -26,6 +28,11 @@ Realice el programa utilizando el ciclo apropiado. -->
 
     document.write("<br>Salario al cabo de "+year+" años: $" + sal_base);
 
+    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../dowhile.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
    </script>
 </body>
 </html>

@@ -11,6 +11,8 @@
     la categoría D se aumentará $15.00 Imprima el sueldo con el aumento incorporado,
     la categoría y el tiempo de servicio del trabajador. -->
     <script>
+        alert('Dado como dato el tiempo de servicio de un trabajador, considere un aumento del 15% si la categoría del trabajador es A, un 12% en caso de que la categoría sea B, si la categoría es C, un aumento del 10% y para la categoría D se aumentará $15.00 Imprima el sueldo con el aumento incorporado, la categoría y el tiempo de servicio del trabajador.');
+
         var tiempo=parseInt(prompt("Ingrese los años de servicio: "));
         var sueldoactual=parseFloat(prompt("Ingrese su sueldo actual: "));
         var newsueldo=0;
@@ -37,6 +39,11 @@
                 "\nCategoría: C"+"\nAños de servicio: "+tiempo);
         }
 
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

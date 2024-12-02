@@ -12,6 +12,8 @@
  utilizando el ciclo apropiado. -->
 <body>
     <script>
+        alert('Una persona se encuentra en el kilómetro 70 de la carretera Aguascalientes- Zacatecas, otra se encuentra en el km 150 de la misma carretera, la primera viaja en dirección a Zacatecas, mientras que la segunda se dirige a Aguascalientes, a la misma velocidad. Realice un programa para determinar en qué kilómetro de esa carretera se encontrarán.')
+     
         var i=1
         var km1=70;
         var km2=150;
@@ -24,6 +26,12 @@
             i++
         }
         while(i<=80)
+
+     // Redirigir al index.html después de 3 segundos
+     setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../dowhile.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

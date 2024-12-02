@@ -9,6 +9,8 @@
     <!-- 20.Se requiere la implementación de un programa que dado un número entero positivo mayor a cero dé como 
     resultado, si dicho número es par o impar. El ejercicio requiere la validación del dato de entrada. -->
     <script>
+           alert('Se requiere la implementación de un programa que dado un número entero positivo mayor a cero dé como resultado, si dicho número es par o impar. El ejercicio requiere la validación del dato de entrada.');
+
         var num=parseInt(prompt("Ingrese un numero entero:"))
         if(num>0){
             if (num % 2 === 0) {
@@ -19,6 +21,12 @@
         }else{
             alert("Ingrese un numero entero mayor a cero")
         }
+
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

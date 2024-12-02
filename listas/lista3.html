@@ -49,6 +49,11 @@
         document.write("Letras"+JSON.stringify(letras_bien)+"<br><br>")
 
 
+                // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="lista.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -10,6 +10,8 @@
     indique con letra la calificación que le corresponde: 10 es “A”, 9 es “B”,
     8 es “C”, 7 y 6 son “D”, y de 5 a 0 son “F”. -->
     <script>
+        alert('Realice un programa que, con base en una calificación proporcionada (0-10), indique con letra la calificación que le corresponde: 10 es “A”, 9 es “B”, 8 es “C”, 7 y 6 son “D”, y de 5 a 0 son “F”.');
+
         var cal=parseInt(prompt("Ingrese su calificación: "))
 
         if(cal==10){
@@ -28,6 +30,12 @@
             alert("Su calificación es: "+cal+
             "\nEquivalente a una: F")
         }
+
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

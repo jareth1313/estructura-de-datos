@@ -13,6 +13,7 @@
     Las cinco siguientes a $3.00 c/u.
     Después de diez horas el costo por cada una es de dos pesos. -->
     <script>
+    alert('El dueño de un estacionamiento requiere un programa que le permita determinar cuánto debe cobrar por el uso del estacionamiento a sus clientes. Las tarifas que se tienen son las siguientes: -Las dos primeras horas a $5.00 c/u. -Las siguientes tres a $4.00 c/u. -Las cinco siguientes a $3.00 c/u. -Después de diez horas el costo por cada una es de dos pesos.');
 
     var Total = 0;
     var horas=parseInt(prompt("Ingrese las horas a estacionasrse: "));
@@ -30,6 +31,12 @@
         Total = (2 * 5) + (3 * 4) + (5 * 3) + ((horas - 10) * 2);
         alert("Total a pagar: "+Total)
     }
+
+                // Redirigir al index.html después de 3 segundos
+                setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

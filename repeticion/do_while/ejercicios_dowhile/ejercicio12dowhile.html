@@ -10,6 +10,8 @@ y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 
 enero y así́ sucesivamente todo el año. Utilice el ciclo apropiado. -->
 <body>
     <script>
+        alert('Se requiere un programa para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así́ sucesivamente todo el año. Utilice el ciclo apropiado.')
+        
     var i=1;
     var ahorro=1;
         do{
@@ -20,6 +22,11 @@ enero y así́ sucesivamente todo el año. Utilice el ciclo apropiado. -->
         while(i<=365)
         alert("Ahorro en 1 año: "+ahorro)
        
+      // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../dowhile.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -212,3 +212,13 @@ footer p {
 footer a:hover {
     color: #d4d4d4; /* Cambio de color al pasar el mouse */
 }
+
+/* Styles for iframe */
+iframe {
+    display: block;
+    width: calc(100% - 40px); /* Full width minus margin */
+    height: calc(100vh - 60px); /* Full height minus nav height and top/bottom margin */
+    margin: 20px; /* Margin around the iframe */
+    border: none; /* Removes frame border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for better aesthetics */
+}

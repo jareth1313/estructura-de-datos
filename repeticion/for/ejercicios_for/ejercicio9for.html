@@ -12,6 +12,8 @@ crédito con un cargo de 5% sobre la compra. Suponiendo que los clientes adquier
     realice un programa para determinar cuánto deben pagar. -->
 <body>
     <script>
+        alert('“El náufrago satisfecho” ofrece hamburguesas sencillas (S), dobles (D) y triples (T), las cuales tienen un costo de $20, $25 y $28 respectivamente. La empresa acepta tarjetas de crédito con un cargo de 5% sobre la compra. Suponiendo que los clientes adquieren N hamburguesas, las cuales pueden ser de diferente tipo, realice un programa para determinar cuánto deben pagar. ')
+        
         var c_h=parseInt(prompt("Ingrese la cantidad de hamburguesas: "));
         var h_senci=20;
         var h_doble=25;
@@ -46,6 +48,12 @@ crédito con un cargo de 5% sobre la compra. Suponiendo que los clientes adquier
         }
         document.write("Total de hamburgesas: "+c_h+
             "<br>Total a pagar: $"+costo_h);
+
+                  // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../for.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

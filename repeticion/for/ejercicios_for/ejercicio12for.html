@@ -10,6 +10,8 @@ y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 
 enero y así́ sucesivamente todo el año. Utilice el ciclo apropiado. -->
 <body>
     <script>
+        alert('Se requiere un programa para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así́ sucesivamente todo el año. Utilice el ciclo apropiado.')
+        
     var ahorro=1;
         for(var i=1;i<=365;i++){
             ahorro=ahorro*3;
@@ -17,6 +19,11 @@ enero y así́ sucesivamente todo el año. Utilice el ciclo apropiado. -->
         }
         alert("Ahorro en 1 año: "+ahorro)
        
+              // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../for.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -9,12 +9,13 @@
     <!-- 13.Desarrollar un programa que lea 10 números por teclado los almacenen en un arreglo 
     y muestre la suma resta multiplicación y división de todos. -->
     <script>
+        alert('Programa que solicita 10 números,los almacena y muestra la suma, resta, multiplicación y división de todos. ')
+        
         var numeros = [];
         var suma=0;
         var mul=1;
 
-        var tam=parseInt(prompt("Ingrese la cantidad de elementos: "));
-        for(var i=0; i<tam; i++){
+        for(var i=0; i<10; i++){
             var val=parseFloat(prompt("Ingrese el valor "+i+": "));
             numeros.push(val); //Registramos los valores que se ingresen.
             suma+=numeros[i]; 
@@ -23,19 +24,19 @@
 
         document.write("<br>Suma = "+suma)
 
-        for(var i=0; i<tam; i++){
+        for(var i=0; i<10; i++){
             mul=mul*numeros[i]; //Tambien se puede así-> mul*=numeros[i]
         }
         document.write("<br>Multiplicación = "+mul)
 
         var resta=numeros[0];
-        for(var i=1; i<tam; i++){
+        for(var i=1; i<10; i++){
             resta=resta-numeros[i]; //Tambien se puede así-> resta-=numeros[i]
         }
         document.write("<br>Resta = "+resta)
 
         var division=numeros[0];
-        for(var i=1; i<tam; i++){
+        for(var i=1; i<10; i++){
             division=division/numeros[i];   //Tambien se puede así-> división/=numeros[i]   
         }
         document.write("<br>División = "+division)

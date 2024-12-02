@@ -9,6 +9,8 @@
     <!-- 1.Se requiere un algoritmo para obtener la edad promedio de un grupo de N alumnos. 
     Realice el programa, utilizando los tres tipos de estructuras de ciclo (For, While, Do While). -->
     <script>
+        alert('Se requiere un algoritmo para obtener la edad promedio de un grupo de N alumnos')
+       
         var suma=0;
         var promedio=0;
         var alumno=parseInt(prompt("Ingrese la cantidad de alumnos: "));
@@ -22,6 +24,11 @@
         }
         document.write("La edad promedio es: "+prom);
 
+          // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../for.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

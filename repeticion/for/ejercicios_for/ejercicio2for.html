@@ -10,6 +10,8 @@
     cuyo número de miembros se desconoce,
     el ciclo debe efectuarse siempre y cuando se tenga una estatura registrada. -->
     <script>
+        alert('Se requiere un programa para obtener la estatura promedio de un grupo de personas, cuyo número de miembros se desconoce, el ciclo debe efectuarse siempre y cuando se tenga una estatura registrada.')
+     
         var suma=0;
         var promedio=0;
         var personas=parseInt(prompt("Ingrese la cantidad de personas: "));
@@ -22,6 +24,12 @@
             prom=suma/i; //Se divide entre i por si el programa se interrumpe nos de un resultado con lo que se haya ingresado.
         }
         document.write("La estatura promedio es: "+prom);
+
+           // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../for.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

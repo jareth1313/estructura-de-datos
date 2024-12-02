@@ -11,15 +11,18 @@ con el siguiente criterio: sumar el primer elemento de a más el último element
 con el noveno elemento de b y así sucesivamente hasta llegar al décimo elemento de a más el primer elemento de b.
 Imprimir las sumas almacenadas en el arreglo c. -->
     <script>
-        var a = [31,32,34,35,36,37,38,39,40,41];
-        var b = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+        alert('Programa que almacena 20 números reales por separado, a partir de ellos se muestra lo siguiente: suma del primer elemento de los primeros 10 números con el último número de los siguientes 10 números y luego el segundo elemento de los primeros 10 números con el noveno elemento de los siguientes 10 números y así sucesivamente.')
 
+        var a = [31,32,34,35,36,37,38,39,40,41];
+        document.write('<br>Primeros 10 números: '+a)
+        var b = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+        document.write('<br>Segundos 10 números: '+b)
         var c = [];
 
         for (var i = 0; i < 10; i++) {
             c[i] = a[i] + b[9 - i];
         }
-        document.write("Sumas almacenadas en el arreglo c: <br>");
+        document.write("<br>Sumas almacenadas: <br>");
         document.write(c);
 
 

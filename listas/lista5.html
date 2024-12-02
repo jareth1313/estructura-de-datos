@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista 5 Dinámica</title>
 </head>
 <body>
     <script>
@@ -40,6 +40,12 @@
 
         var mayor8=promedio.filter(cal=>cal.prom>8)
         document.write("Mayores a 8"+JSON.stringify(mayor8)+"<br><br>")
+        
+                // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="lista.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejemplo de Pila</title>
 </head>
 <body>   
     <script>
+        alert('Solo es este ejercicio. Simular el comportamiento de una pila por medio de un arreglo');
+      
         var tam=parseInt(prompt("Ingrese el tamaño de la pila: "));
         var pila = [];
         
@@ -27,6 +29,11 @@
 
         document.write("<br>Tamaño de la pila: "+ pila.length);
 
+        // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../cola.html";
+    }, 2000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

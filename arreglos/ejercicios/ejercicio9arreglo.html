@@ -8,9 +8,11 @@
 <body>
 <!--9.Crear un programa que lea la cantidad de números deseada por el cliente y no permita introducir números repetidos. -->
     <script>
+        alert('Programa que lee la cantidad de números deseados por el usuario y no permite introducir números repetidos. ')
+        
         var numeros=[];
 
-        tam=parseInt(prompt("Ingrese la cantidad de datos a ingresar: "));
+        tam=parseInt(prompt("Ingrese la cantidad de números a ingresar: "));
         for(var i=0;i<tam;i++){
             var num=parseInt(prompt("Ingrese el número "+i+": "));
             if(!numeros.includes(num)) {

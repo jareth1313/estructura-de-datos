@@ -11,6 +11,8 @@ Realice un algoritmo para determinar el sueldo semanal de N trabajadores y adem�
 cuánto pagó la empresa por los N empleados. Utilice el ciclo apropiado. -->
 <body>
     <script>
+         alert('Una empresa les paga a sus empleados con base en las horas trabajadas en la semana. Para esto, se registran los días que laboró y las horas de cada día. Realice un algoritmo para determinar el sueldo semanal de N trabajadores y además calcule cuánto pagó la empresa por los N empleados. Utilice el ciclo apropiado.')
+     
         var can_p=parseInt(prompt("Ingrese la cantidad de empleados: "));
         var pago_h=parseFloat(prompt("Ingrese el costo por hora: "));
         var pago=0;
@@ -29,6 +31,12 @@ cuánto pagó la empresa por los N empleados. Utilice el ciclo apropiado. -->
 
         document.write("Sueldo semanal: "+p_semanal+"<br>"+
             "Pago total de la empresa: "+pago);
+
+            // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../for.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

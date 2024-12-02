@@ -14,6 +14,8 @@ de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús e
 de $4000.00, sin importar el número de alumnos. Realice un programa que permita
 determinar el pago a la compañía de autobuses y lo que debe pagar cada alumno por el viaje. -->
     <script>
+          alert('El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de $65.00; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús es de $4000.00, sin importar el número de alumnos. Realice un programa que permita determinar el pago a la compañía de autobuses y lo que debe pagar cada alumno por el viaje.');
+
         var alumnos=parseInt(prompt("Ingrese la cantidad de alumnos: "));
         var total=0;
         if(alumnos>=100){
@@ -41,6 +43,12 @@ determinar el pago a la compañía de autobuses y lo que debe pagar cada alumno 
             "<br>Costo por alumno: $"+total+
             "<br>Total a pagar por la compañía de autobuses: $4000.00");
         }
+
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 
 </body>

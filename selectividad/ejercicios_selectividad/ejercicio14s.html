@@ -10,6 +10,8 @@
     si tienen 2 años, $200, y así́ sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será́ de $1000.
     Realice un programa que permita determinar el bono que recibirá́ un trabajador. -->
     <script>
+        alert('Se les dará́ un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así́ sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será́ de $1000. Realice un programa que permita determinar el bono que recibirá́ un trabajador.');
+
         var antiguedad = parseInt(prompt("Ingrese su antigüedad en años: "))
 
         if(antiguedad == 1){
@@ -36,6 +38,12 @@
             alert("Antigüedad: "+antiguedad+" años"+
                 "\n Bono: 1000$")
         }
+
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

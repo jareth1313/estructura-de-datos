@@ -16,6 +16,8 @@
     este gasto representa 30% sobre el costo de la materia prima; si las claves son 3 o 6, representa 35%; si las claves 
     son 1 o 4, representa 28%. La materia prima tiene el mismo costo para cualquier clave. -->
     <script>
+        alert('Fábricas “El cometa” produce artículos con claves (1, 2, 3, 4, 5 y 6). Se requiere un programa para calcular lo precios de venta, para esto hay que considerar lo siguiente: Costo de producción = materia prima + mano de obra + gastos de fabricación. Precio de venta = costo de producción + 45 % de costo de producción. El costo de la mano de obra se obtiene de la siguiente forma: para los productos con clave 3 o 4 se carga 75% del costo de la materia prima; para los que tienen clave 1 y 5 se carga 80%, y para los que tienen clave 2 o 6, 85%. Para calcular el gasto de fabricación se considera que si el artículo que se va a producir tiene claves 2 o 5, este gasto representa 30% sobre el costo de la materia prima; si las claves son 3 o 6, representa 35%; si las claves son 1 o 4, representa 28%. La materia prima tiene el mismo costo para cualquier clave.');
+
         var materia_prima = parseInt(prompt("Costo de la materia prima:"));
         var clave = prompt("Clave del artículo:");
         var mano_obra = 0;
@@ -43,6 +45,12 @@
         costo = materia_prima+mano_obra+gastos_fabri
         var venta = costo*1.45
         document.write("El valor de venta del producto es: $"+venta)
+
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

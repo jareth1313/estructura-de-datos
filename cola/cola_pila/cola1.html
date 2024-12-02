@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de Cola</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+      
+      alert('Solo es este ejercicio.\nEjercicio: Simular el comportamiento de una cola por medio de un arreglo');
+      
+      var cola = [];
+      
+      document.write('llega: María<br>');
+      document.write('cola:<br>');
+      cola.push('María');
+      
+      console.log(cola);
+      document.write(cola);
+      document.write('<br>');
+      
+      document.write('<br>');
+      document.write('llegan: Alberto y Felipe<br>');
+      document.write('cola:<br>');
+      cola.push('Alberto');
+      cola.push('Felipe');
+      
+      console.log(cola);
+      document.write(cola);
+      document.write('<br>');
+      
+      document.write('<br>');
+      document.write('llegan: Antonia con Carlos y José con Luis<br>');
+      document.write('cola:<br>');
+      cola.push('Antonia');
+      cola.push('Carlos');
+      cola.push('José');
+      cola.push('Luis');
+      
+      console.log(cola);
+      document.write(cola);
+      document.write('<br>');
+      
+      // Con la función shift podemos saber quien es el primero de la cola
+      document.write('<br>');
+      document.write('el primero:<br>');
+      var primeroCola = cola.shift();
+      
+      console.log(primeroCola);
+      document.write(primeroCola);
+      document.write('<br>');
+      
+      document.write('<br>');
+      document.write('los demás:<br>');
+      console.log(cola);
+      document.write(cola);
+      document.write('<br>');
+      
+      document.write('<br>');
+      document.write('el siguiente:<br>');
+      var primeroCola = cola.shift();
+      
+      console.log(primeroCola);
+      document.write(primeroCola);
+      document.write('<br>');
+      
+      document.write('<br>');
+      document.write('los demás:<br>');
+      console.log(cola);
+      document.write(cola);
+      document.write('<br>');
+
+// Redirigir al index.html después de 3 segundos
+setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../cola.html";
+    }, 2000); // Tiempo en milisegundos (3000ms = 2s)
+</script>
+
+  </body>
+</html>

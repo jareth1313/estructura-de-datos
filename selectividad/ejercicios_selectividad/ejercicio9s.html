@@ -10,6 +10,8 @@
     mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100 pero menor a $200, 
     el descuento es de 12%, y si es menor a $100, sólo 10%. -->
     <script>
+        alert('Realice el programa que determine el costo y el descuento que tendrá́ un artículo. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100 pero menor a $200, el descuento es de 12%, y si es menor a $100, sólo 10%.');
+
         var precio=parseFloat(prompt("Ingrese el precio del artículo: "))
         var descuento=0;
         var total=0;
@@ -35,6 +37,11 @@
                 "<br> Total a pagar: "+total
             )
         }
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

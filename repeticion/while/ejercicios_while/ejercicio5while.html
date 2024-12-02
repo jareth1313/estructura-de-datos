@@ -12,6 +12,8 @@ vendido en cada categoría y de forma
 global. Realice un programa que permita determinar lo anterior utilizando el ciclo apropiado. -->
 <body>
     <script>
+        alert('Un empleado de la tienda “Tiki Taka” realiza N ventas durante el día, se requiere saber cuántas de ellas fueron mayores a $1000, cuántas fueron mayores a $500 pero menores o iguales a $1000, y cuántas fueron menores o iguales a $500. Además, se requiere saber el monto de lo vendido en cada categoría y de forma global. Realice un programa que permita determinar lo anterior utilizando el ciclo apropiado.')
+     
         var i=1;
         var venta=0;
         var venta2=0;
@@ -41,6 +43,12 @@ global. Realice un programa que permita determinar lo anterior utilizando el cic
         document.write("<br>Ventas entre $500 y $1000: "+k+"<br>Total: "+venta2);
         document.write("<br>Ventas menores a $500: "+l+ "<br>Total: "+venta3);
         document.write("<br>Total de todas las ventas: $"+total);
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../while.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -11,6 +11,8 @@
  Realice el programa utilizando un ciclo apropiado. -->
 <body>
     <script>
+         alert('Se requiere un programa para determinar cuánto ahorrará una persona en un año, si al final de cada mes deposita variables cantidades de dinero; además, se requiere saber cuánto lleva ahorrado cada mes.')
+     
         var i=1
         var suma=0;
 
@@ -24,6 +26,12 @@
         }
         while(i<=mes)
         document.write("<br>Total ahorrado en "+mes+" mes/es: "+suma);
+
+    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../dowhile.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

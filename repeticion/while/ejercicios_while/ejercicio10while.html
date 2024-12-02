@@ -9,6 +9,8 @@
 cuántas son menores a cero, y cuántas son mayores a cero. Utilice el ciclo apropiado. -->
 <body>
     <script>
+        alert('Se requiere un programa para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Utilice el ciclo apropiado.')
+        
         var i=1;
         var cantidades=parseInt(prompt("Cuantas cantidades ingresará: "));
         var j=0;
@@ -29,6 +31,12 @@ cuántas son menores a cero, y cuántas son mayores a cero. Utilice el ciclo apr
         document.write("Cantidad de numeros menores a 0: "+j);
         document.write("<br>Cantidad de numeros iguales 0: "+k);
         document.write("<br>Cantidad de numeros mayores 0: "+l);
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../while.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

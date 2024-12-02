@@ -9,11 +9,14 @@
 <!-- 42.Almacene un arreglo de longitud n ordenado en forma ascendente y un elemento x del mismo tipo que los
 elementos del arreglo, intercalar x en el arreglo v de manera que siga ordenado. -->
     <script>
+        alert('Programa que almacena N números ordenados de forma ascendente. Se intercala otro número que se intercala manteniendo el orden.')
+
         var v = [1, 3, 5, 7, 9, 11]; 
         var x = 2;
 
         document.write("Arreglo original:<br>");
         document.write(v);
+        document.write("<brNúmero a intercalar:<br>"+x);
 
         for (var i = 0; i < v.length; i++) {
             if (x < v[i]) {
@@ -25,7 +28,7 @@ elementos del arreglo, intercalar x en el arreglo v de manera que siga ordenado.
         if (x >= v[v.length - 1]) {
             v.push(x);
         }
-        document.write("Arreglo después de intercalar x:<br>");
+        document.write("<br>Arreglo después de intercalar x:<br>");
         document.write(v);
 
             // Redirigir al index.html después de 3 segundos

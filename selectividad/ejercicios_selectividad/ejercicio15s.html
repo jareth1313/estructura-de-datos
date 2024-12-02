@@ -10,6 +10,8 @@
     y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, 
     de la hora 46 a la 50, el triple, y que trabajar más de 50 horas no está permitido. -->
     <script>
+        alert('Realice un programa que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar más de 50 horas no está permitido.');
+
         var horas=parseInt(prompt("Ingrese sus horas trabajadas: "));
         var pago_h=parseInt(prompt("Ingrese el pago por hora: "));
         var sueldo=0;
@@ -34,6 +36,11 @@
         )
         
 
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

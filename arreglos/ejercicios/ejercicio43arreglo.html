@@ -6,10 +6,11 @@
     <title>Arreglo 43</title>
 </head>
 <body>
-<!-- 43.Almacene 2 arreglos a y b de longitudes n y m, el primero ordenado en forma ascendente y el segundo ordenado de 
-manera descendente, crear un nuevo arreglo c de n + m elementos intercalando los elementos de a y b de modo que c 
-quede ordenado en forma ascendente. -->
+<!-- 43.Programa que almacena 2 longitudes de números por separado, la primer longitud de números es ordenada en forma ascendente y la segunda longitud de números es ordenada de 
+manera descendente, se muestra la union de las dos longitudes de números ordenados de forma ascendente. -->
     <script>
+        alert('Almacene 2 arreglos a y b de longitudes n y m, el primero ordenado en forma ascendente y el segundo ordenado de manera descendente, crear un nuevo arreglo c de n + m elementos intercalando los elementos de a y b de modo que c quede ordenado en forma ascendente.')
+
         var n = parseInt(prompt("Ingrese la longitud del arreglo a: "));
         var m = parseInt(prompt("Ingrese la longitud del arreglo b: "));
 
@@ -47,6 +48,17 @@ quede ordenado en forma ascendente. -->
             c.push(b[j]);
             j++;
         }
+
+        for(i=0; i<c.length; i++){
+            for(j=0; j<c.length-i-1; j++){
+                if(c[j]>c[j+1]){
+                    var aux=c[j+1];
+                    c[j+1]=c[j];
+                    c[j]=aux;
+                }
+            }
+        }
+
         document.write("Arreglo a (ascendente): " + a + "<br>");
         document.write("Arreglo b (descendente): " + b + "<br>");
         document.write("Arreglo c (combinado y ordenado ascendentemente): " + c + "<br>");

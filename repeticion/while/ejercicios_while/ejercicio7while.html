@@ -12,6 +12,8 @@ empleados, asimismo, cada una registra lo que vende de manera individual cada em
 cuánto fue lo que vendió́ cada tienda, cuánto se vendió́ en cada ciudad y cuánto recaudó la
 cadena en un solo día. Realice un programa para determinar lo anterior utilizando el ciclo apropiado. -->
     <script>
+         alert('La cadena de tiendas de autoservicio “El mandilón” cuenta con sucursales en C ciudades diferentes de la República, en cada ciudad cuenta con T tiendas y cada tienda cuenta con N empleados, asimismo, cada una registra lo que vende de manera individual cada empleado, cuánto fue lo que vendió́ cada tienda, cuánto se vendió́ en cada ciudad y cuánto recaudó la cadena en un solo día. Realice un programa para determinar lo anterior utilizando el ciclo apropiado.')
+     
         var t_tienda=0;
         var t_ciudad=0;
         var t_sucu=0;
@@ -47,6 +49,12 @@ cadena en un solo día. Realice un programa para determinar lo anterior utilizan
             i++
         }
         document.write("<br>El total recaudado al día es: "+t_sucu+"$");
+
+                 // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../while.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

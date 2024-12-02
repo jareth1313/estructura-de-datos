@@ -9,6 +9,8 @@
     <!-- 18.Dado como datos el sueldo de un trabajador, aplíquele un aumento del 17% si su sueldo es inferior a 
     $1000.00 Imprima en este caso, el nuevo sueldo del trabajador. -->
     <script>
+        alert('Dado como datos el sueldo de un trabajador, aplíquele un aumento del 17% si su sueldo es inferior a $1000.00 Imprima en este caso, el nuevo sueldo del trabajador.');
+
         var sueldo=parseInt(prompt("Ingrese su sueldo: "))
         var aumento=1.17;
         
@@ -20,6 +22,12 @@
                 "\nSu aumento es de: $"+(nuevoSueldo-sueldo).toFixed(2)+
             "\nAnterior sueldo: "+sueldo);
         }
+
+                    // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../selectividad.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>

@@ -10,6 +10,8 @@ de un lote de N focos, el número de focos de cada color que hay en existencia.
 Desarrolle un programa para determinar esto, utilizando el ciclo apropiado. -->
 <body>
     <script>
+         alert('Una compañía fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia. Desarrolle un programa para determinar esto, utilizando el ciclo apropiado.')
+        
         var i=1;
         var c_focos=parseInt(prompt("Ingrese la cantidad del lote de focos: "));
         var focos_verdes=0, focos_blancos=0, focos_rojos=0;
@@ -33,6 +35,12 @@ Desarrolle un programa para determinar esto, utilizando el ciclo apropiado. -->
             document.write("<br>Focos blancos existentes: "+focos_blancos);
             document.write("<br>Focos verdes existentes: "+focos_verdes);
             document.write("<br>Total de focos: "+total_f);
+
+                     // Redirigir al index.html después de 3 segundos
+    setTimeout(function() {
+        alert("Programa concluido");
+        window.location.href ="../while.html";
+    }, 3000); // Tiempo en milisegundos (3000ms = 2s)
     </script>
 </body>
 </html>
